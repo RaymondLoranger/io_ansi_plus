@@ -31,3 +31,6 @@ Most of these 256 colors were given names like:
 For details, see file `config/persist_colors.exs`.
 
 <a name="footnote1">1</a> Actually 8 colors and their "bright" variants.
+
+## Examples
+## ![examples](images/io_ansi_plus_examples.png)
