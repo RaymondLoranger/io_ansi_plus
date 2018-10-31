@@ -19,7 +19,7 @@ end
 
 ## Notes
 
-In addition to the 16 regular ANSI colors <sup>[1](#footnote1)</sup> and
+In addition to the 16 regular ANSI colors<sup>[*](#footnote1)</sup> and
 their background counterparts, this package also supports the 256 Xterm colors
 (foreground and background).
 
@@ -30,7 +30,7 @@ Most of these 256 colors were given names like:
 
 For details, see file `config/persist_colors.exs`.
 
-<a name="footnote1">1</a> Actually 8 colors and their "bright" variants.
+<sup><a name="footnote1">*</a></sup> Actually 8 colors and their "bright" variants.
 
 ## Examples
 ## ![examples](images/io_ansi_plus_examples.png)
