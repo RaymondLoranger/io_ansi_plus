@@ -5,6 +5,9 @@ defmodule IO.ANSI.Plus do
   [ANSI escape sequences](https://en.wikipedia.org/wiki/ANSI_escape_code)
   are characters embedded in text used to control formatting, color, and
   other output options on video text terminals.
+
+  In addition to the 16 regular ANSI colors and their background counterparts,
+  this module also supports the 256 Xterm colors (foreground and background).
   """
 
   use PersistConfig
@@ -185,6 +188,9 @@ defmodule IO.ANSI.Plus do
   @doc "Sends cursor home."
   defsequence(:home, "", "H")
 
+  defguardp valid_line(line) when is_integer(line) and line >= 0
+  defguardp valid_column(column) when is_integer(column) and column >= 0
+
   @doc """
   Sends cursor to the absolute position specified by `line` and `column`.
 
@@ -192,9 +198,8 @@ defmodule IO.ANSI.Plus do
   """
   @spec cursor(non_neg_integer, non_neg_integer) :: String.t()
   def cursor(line, column)
-      when is_integer(line) and line >= 0 and is_integer(column) and column >= 0 do
-    "\e[#{line};#{column}H"
-  end
+      when valid_line(line) and valid_column(column),
+      do: "\e[#{line};#{column}H"
 
   @doc "Sends cursor `lines` up."
   @spec cursor_up(pos_integer) :: String.t()

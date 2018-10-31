@@ -1,4 +1,4 @@
-# IO.ANSI.Plus
+# IO ANSI Plus
 
 [![Build Status](https://travis-ci.org/RaymondLoranger/io_ansi_plus.svg?branch=master)](https://travis-ci.org/RaymondLoranger/io_ansi_plus)
 
@@ -19,8 +19,9 @@ end
 
 ## Notes
 
-In addition to the 16 regular ANSI colors and their background counterparts,
-this package also supports the 256 Xterm colors (foreground and background).
+In addition to the 16 regular ANSI colors <sup>[1](#footnote1)</sup> and
+their background counterparts, this package also supports the 256 Xterm colors
+(foreground and background).
 
 Most of these 256 colors were given names like:
 - ![#00ffff](https://placehold.it/15/00ffff/000000?text=+)`:aqua`
@@ -28,3 +29,5 @@ Most of these 256 colors were given names like:
 - ![#d700ff](https://placehold.it/15/d700ff/000000?text=+)`:psychedelic_purple`
 
 For details, see file `config/persist_colors.exs`.
+
+<a name="footnote1">1</a> Actually 8 colors and their "bright" variants.
