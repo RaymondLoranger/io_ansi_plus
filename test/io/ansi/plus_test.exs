@@ -1,6 +1,4 @@
 defmodule IO.ANSI.PlusTest do
-  @moduledoc false
-
   use ExUnit.Case, async: true
 
   alias IO.ANSI.Plus
