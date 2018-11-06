@@ -28,8 +28,6 @@ Most of these 256 colors were given names like:
 - ![#87ff00](https://placehold.it/15/87ff00/000000?text=+)`:chartreuse`
 - ![#d700ff](https://placehold.it/15/d700ff/000000?text=+)`:psychedelic_purple`
 
-For details, see file `config/persist_colors.exs`.
-
 You can use color number atoms for the few colors that are unnamed:
 
 ```elixir
@@ -38,6 +36,8 @@ alias IO.ANSI.Plus, as: ANSI
 ["Hello, ", :color163_background, "world!"] |> ANSI.format(true) |> IO.puts()
 ```
 Any color can have multiple names, for example `:moccasin` and `:navajo_white`.
+
+For details, see file `config/persist_colors.exs`.
 
 <sup><a name="footnote1">*</a></sup> Actually 8 colors and their "bright" variants.
 
