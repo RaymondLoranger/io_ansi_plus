@@ -28,7 +28,7 @@ Most of these 256 colors were given names like:
 - ![#87ff00](https://placehold.it/15/87ff00/000000?text=+)`:chartreuse`
 - ![#d700ff](https://placehold.it/15/d700ff/000000?text=+)`:psychedelic_purple`
 
-For details, see file ![config/persist_colors.exs](https://github.com/RaymondLoranger/io_ansi_plus/blob/master/config/persist_colors.exs).
+For details, see file ![config/persist_colors.exs](config/persist_colors.exs).
 
 You can use color number atoms for the few colors that are unnamed:
 
