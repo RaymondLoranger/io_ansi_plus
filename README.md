@@ -39,6 +39,8 @@ alias IO.ANSI.Plus, as: ANSI
 ```
 Any color can have multiple names, for example `:moccasin` and `:navajo_white`.
 
+<sup><a name="footnote1">*</a></sup> Actually 8 colors and their "bright" variants.
+
 ## Customization
 
 You can create new color names or modify any predefined one by changing the
@@ -63,8 +65,6 @@ alias IO.ANSI.Plus, as: ANSI
 ["Hello, ", :brown, "world!"] |> ANSI.puts(true)
 [:aqua, "Garry, your move:", :reset, " "] |> ANSI.gets(true)
 ```
-
-<sup><a name="footnote1">*</a></sup> Actually 8 colors and their "bright" variants.
 
 ## Examples
 ## ![examples](images/io_ansi_plus_examples.png)
