@@ -260,7 +260,7 @@ defmodule IO.ANSI.Plus do
 
   ## Examples
 
-      iex> IO.ANSI.format(["Hello, ", :red, :bright, "world!"], true)
+      iex> IO.ANSI.Plus.format(["Hello, ", :red, :bright, "world!"], true)
       [[[[[[], "Hello, "] | "\e[31m"] | "\e[1m"], "world!"] | "\e[0m"]
 
   """
@@ -280,7 +280,7 @@ defmodule IO.ANSI.Plus do
 
   ## Examples
 
-      iex> IO.ANSI.format_fragment([:bright, 'Word'], true)
+      iex> IO.ANSI.Plus.format_fragment([:bright, 'Word'], true)
       [[[[[[] | "\e[1m"], 87], 111], 114], 100]
 
   """
