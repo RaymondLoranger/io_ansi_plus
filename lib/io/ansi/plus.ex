@@ -162,6 +162,13 @@ defmodule IO.ANSI.Plus do
     defsequence(:"#{color}_background", "48;5;#{code}")
   end
 
+  @spec puts(ansidata, boolean) :: :ok
+  def puts(chardata, emit? \\ enabled?()) when is_boolean(emit?),
+    do: chardata |> format(emit?) |> IO.puts()
+
+  defguardp valid_line(line) when is_integer(line) and line >= 0
+  defguardp valid_column(column) when is_integer(column) and column >= 0
+
   ## End of enhancements
 
   @doc "Default text color."
@@ -187,9 +194,6 @@ defmodule IO.ANSI.Plus do
 
   @doc "Sends cursor home."
   defsequence(:home, "", "H")
-
-  defguardp valid_line(line) when is_integer(line) and line >= 0
-  defguardp valid_column(column) when is_integer(column) and column >= 0
 
   @doc """
   Sends cursor to the absolute position specified by `line` and `column`.
