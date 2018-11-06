@@ -30,15 +30,19 @@ Most of these 256 colors were given names like:
 
 For details, see file `config/persist_colors.exs`.
 
-Also provides a shortcut to skip the `format` call in the following expression:
+Also provides shortcuts to drop the `format` calls in the following expressions:
 
 ```elixir
-["Hello, ", :brown, "world!"] |> IO.ANSI.Plus.format(true) |> IO.puts()
+alias IO.ANSI.Plus, as: ANSI
+["Hello, ", :brown, "world!"] |> ANSI.format(true) |> IO.puts()
+[:aqua, "Garry, your move:", :reset, " "] |> ANSI.format(true) |> IO.gets()
 ```
 
-The above expression can be shortened to:
+The above expressions can be shortened to:
 ```elixir
-["Hello, ", :brown, "world!"] |> IO.ANSI.Plus.puts(true)
+alias IO.ANSI.Plus, as: ANSI
+["Hello, ", :brown, "world!"] |> ANSI.puts(true)
+[:aqua, "Garry, your move:", :reset, " "] |> ANSI.gets(true)
 ```
 
 <sup><a name="footnote1">*</a></sup> Actually 8 colors and their "bright" variants.

@@ -83,7 +83,9 @@ defmodule IO.ANSI.Plus do
   @doc "Blink: slow. Less than 150 per minute."
   defsequence(:blink_slow, 5)
 
-  @doc "Blink: rapid. MS-DOS ANSI.SYS; 150 per minute or more; not widely supported."
+  @doc """
+  Blink: rapid. MS-DOS ANSI.SYS; 150 per minute or more; not widely supported.
+  """
   defsequence(:blink_rapid, 6)
 
   @doc "Image: negative. Swap foreground and background."
@@ -95,7 +97,10 @@ defmodule IO.ANSI.Plus do
   @doc "Conceal. Not widely supported."
   defsequence(:conceal, 8)
 
-  @doc "Crossed-out. Characters legible, but marked for deletion. Not widely supported."
+  @doc """
+  Crossed-out. Characters legible, but marked for deletion.
+  Not widely supported.
+  """
   defsequence(:crossed_out, 9)
 
   @doc "Sets primary (default) font."
@@ -165,6 +170,10 @@ defmodule IO.ANSI.Plus do
   @spec puts(ansidata, boolean) :: :ok
   def puts(chardata, emit? \\ enabled?()) when is_boolean(emit?),
     do: chardata |> format(emit?) |> IO.puts()
+
+  @spec gets(ansidata, boolean) :: :unicode.chardata() | {:error, term} | :eof
+  def gets(chardata, emit? \\ enabled?()) when is_boolean(emit?),
+    do: chardata |> format(emit?) |> IO.gets()
 
   defguardp valid_line(line) when is_integer(line) and line >= 0
   defguardp valid_column(column) when is_integer(column) and column >= 0
@@ -237,8 +246,8 @@ defmodule IO.ANSI.Plus do
   end
 
   @doc ~S"""
-  Formats a chardata-like argument by converting named ANSI sequences into actual
-  ANSI codes.
+  Formats a chardata-like argument by converting named ANSI sequences into
+  actual ANSI codes.
 
   The named sequences are represented by atoms.
 
@@ -260,8 +269,8 @@ defmodule IO.ANSI.Plus do
   end
 
   @doc ~S"""
-  Formats a chardata-like argument by converting named ANSI sequences into actual
-  ANSI codes.
+  Formats a chardata-like argument by converting named ANSI sequences into
+  actual ANSI codes.
 
   The named sequences are represented by atoms.
 
