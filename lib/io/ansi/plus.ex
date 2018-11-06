@@ -171,7 +171,7 @@ defmodule IO.ANSI.Plus do
   def puts(chardata, emit? \\ enabled?()) when is_boolean(emit?),
     do: chardata |> format(emit?) |> IO.puts()
 
-  @spec gets(ansidata, boolean) :: :unicode.chardata() | {:error, term} | :eof
+  @spec gets(ansidata, boolean) :: IO.chardata() | IO.nodata()
   def gets(chardata, emit? \\ enabled?()) when is_boolean(emit?),
     do: chardata |> format(emit?) |> IO.gets()
 
