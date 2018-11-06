@@ -8,6 +8,8 @@ defmodule IO.ANSI.Plus do
 
   In addition to the 16 regular ANSI colors and their background counterparts,
   this module also supports the 256 Xterm colors (foreground and background).
+
+  Shortcut functions `gets` and `puts` are also provided.
   """
 
   use PersistConfig
