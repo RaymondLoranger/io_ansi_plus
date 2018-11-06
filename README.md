@@ -30,7 +30,26 @@ Most of these 256 colors were given names like:
 
 For details, see file `config/persist_colors.exs`.
 
-Also provides shortcuts to drop the `format` calls in the following expressions:
+You can use color number atoms for the few colors that are unnamed:
+
+```elixir
+alias IO.ANSI.Plus, as: ANSI
+["Hello, ", :color163, "world!"] |> ANSI.format(true) |> IO.puts()
+["Hello, ", :color163_background, "world!"] |> ANSI.format(true) |> IO.puts()
+```
+Any color can have multiple names, for example `:moccasin` and `:navajo_white`.
+
+## Customization
+
+You can create new color names or modify any predefined one by changing the
+dependency's `config/persist_colors.exs` file.
+You would then need to run `mix deps.compile io_ansi_plus [--force]` to make
+the changes effective.
+
+## Shortcuts
+
+The package also provides shortcuts to drop the `format` calls in the following
+expressions:
 
 ```elixir
 alias IO.ANSI.Plus, as: ANSI
