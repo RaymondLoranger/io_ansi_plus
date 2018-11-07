@@ -36,7 +36,7 @@ alias IO.ANSI.Plus, as: ANSI
 ["Hello, ", :color163_background, "world!"] |> ANSI.format(true) |> IO.puts()
 ```
 
-Any color can have multiple names, for example `:moccasin` and `:navajo_white`.
+Any color can have multiple names, for example, `:moccasin` and `:navajo_white`.
 
 For details, see file `config/persist_colors.exs`.
 
