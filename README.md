@@ -35,6 +35,7 @@ alias IO.ANSI.Plus, as: ANSI
 ["Hello, ", :color163, "world!"] |> ANSI.format(true) |> IO.puts()
 ["Hello, ", :color163_background, "world!"] |> ANSI.format(true) |> IO.puts()
 ```
+
 Any color can have multiple names, for example `:moccasin` and `:navajo_white`.
 
 For details, see file `config/persist_colors.exs`.
@@ -56,13 +57,16 @@ expressions:
 ```elixir
 alias IO.ANSI.Plus, as: ANSI
 ["Hello, ", :brown, "world!"] |> ANSI.format(true) |> IO.puts()
+["Hello, ", :purple, "world!"] |> ANSI.format(true) |> IO.write()
 [:aqua, "Garry, your move:", :reset, " "] |> ANSI.format(true) |> IO.gets()
 ```
 
-The above expressions can be shortened to:
+The above expressions can be respectively shortened to:
+
 ```elixir
 alias IO.ANSI.Plus, as: ANSI
 ["Hello, ", :brown, "world!"] |> ANSI.puts(true)
+["Hello, ", :purple, "world!"] |> ANSI.write(true)
 [:aqua, "Garry, your move:", :reset, " "] |> ANSI.gets(true)
 ```
 

@@ -9,8 +9,8 @@ defmodule IO.ANSI.Plus do
   In addition to the 16 regular ANSI colors and their background counterparts,
   this module also supports the 256 Xterm colors (foreground and background).
 
-  New shortcut functions `IO.ANSI.Plus.gets/2` and `IO.ANSI.Plus.puts/2` are
-  also provided.
+  New shortcut functions `IO.ANSI.Plus.gets/2`, `IO.ANSI.Plus.puts/2` and
+  `IO.ANSI.Plus.write/2`are also provided.
   """
 
   use PersistConfig
@@ -170,13 +170,17 @@ defmodule IO.ANSI.Plus do
     defsequence(:"#{color}_background", "48;5;#{code}")
   end
 
+  @spec gets(ansidata, boolean) :: IO.chardata() | IO.nodata()
+  def gets(chardata, emit? \\ enabled?()) when is_boolean(emit?),
+    do: chardata |> format(emit?) |> IO.gets()
+
   @spec puts(ansidata, boolean) :: :ok
   def puts(chardata, emit? \\ enabled?()) when is_boolean(emit?),
     do: chardata |> format(emit?) |> IO.puts()
 
-  @spec gets(ansidata, boolean) :: IO.chardata() | IO.nodata()
-  def gets(chardata, emit? \\ enabled?()) when is_boolean(emit?),
-    do: chardata |> format(emit?) |> IO.gets()
+  @spec write(ansidata, boolean) :: :ok
+  def write(chardata, emit? \\ enabled?()) when is_boolean(emit?),
+    do: chardata |> format(emit?) |> IO.write()
 
   defguardp valid_line(line) when is_integer(line) and line >= 0
   defguardp valid_column(column) when is_integer(column) and column >= 0
