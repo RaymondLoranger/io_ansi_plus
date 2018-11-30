@@ -3,11 +3,11 @@
 [![Build Status](https://travis-ci.org/RaymondLoranger/io_ansi_plus.svg?branch=master)](https://travis-ci.org/RaymondLoranger/io_ansi_plus)
 
 Functionality to render ANSI escape sequences.
-Clone of `IO.ANSI` supporting named Xterm colors.
+Clone of module `IO.ANSI` but supporting named Xterm colors.
 
 ## Installation
 
-Add the `:io_ansi_plus` dependency to your `mix.exs` file:
+Add `io_ansi_plus` to your list of dependencies in `mix.exs`:
 
 ```elixir
 def deps do
@@ -44,8 +44,8 @@ For details, see file `config/persist_colors.exs`.
 
 ## Customization
 
-You can create new color names or modify any predefined one by changing the
-dependency's `config/persist_colors.exs` file.
+You can create new color names or modify any predefined one by changing file
+`config/persist_colors.exs`.
 You would then need to run `mix deps.compile io_ansi_plus [--force]` to make
 the changes effective.
 
