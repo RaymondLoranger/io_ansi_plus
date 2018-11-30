@@ -45,8 +45,8 @@ For details, see file `config/persist_colors.exs`.
 ## Customization
 
 You can specify new color names by changing file `config/persist_colors.exs`.
-You would then need to run
-<nobr>`mix deps.compile io_ansi_plus [--force]`</nobr>
+
+You would then need to run `mix deps.compile io_ansi_plus [--force]`
 to make the changes effective.
 
 ## Shortcuts
