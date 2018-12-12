@@ -24,5 +24,7 @@ io_ansi_plus-*.tar
 
 perso*
 tree*
-/log
+/log/
+/sheets/
+/lib/io/ansi/plus/
 /.elixir_ls

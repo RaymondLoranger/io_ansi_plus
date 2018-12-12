@@ -71,3 +71,6 @@ alias IO.ANSI.Plus, as: ANSI
 
 ## Examples
 ## ![examples](images/io_ansi_plus_examples.png)
+
+## Color Chart
+## ![color_chart](images/color_chart.png)
