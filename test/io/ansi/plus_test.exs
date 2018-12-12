@@ -15,7 +15,7 @@ defmodule IO.ANSI.PlusTest do
     # Xterm color...
     test "the color purple" do
       assert Plus.format(["Hello, ", :purple, "world!"], true) ==
-               [[[[[], "Hello, "] | "\e[38;5;93m"], "world!"] | "\e[0m"]
+               [[[[[], "Hello, "] | "\e[38;5;5m"], "world!"] | "\e[0m"]
     end
   end
 end

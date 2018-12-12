@@ -1,5 +1,6 @@
 use Mix.Config
 
+# For illustration only...
 config :io_ansi_plus,
   color_codes: %{
     maroon: 1,
@@ -15,6 +16,7 @@ config :io_ansi_plus,
     white_smoke: 255
   }
 
+# Actual configuration...
 config :io_ansi_plus,
   color_codes:
     [
@@ -52,7 +54,7 @@ config :io_ansi_plus,
         code: 5,
         hex: "#800080",
         rgb: "rgb(128,0,128)",
-        names: [:fresh_eggplant]
+        names: [:fresh_eggplant, :purple]
       },
       %{
         code: 6,
@@ -160,7 +162,7 @@ config :io_ansi_plus,
         code: 23,
         hex: "#005f5f",
         rgb: "rgb(0,95,95)",
-        names: [:blue_stone, :mosque, :dark_slate_gray]
+        names: [:blue_stone, :dark_slate_gray, :mosque]
       },
       %{
         code: 24,
@@ -172,13 +174,13 @@ config :io_ansi_plus,
         code: 25,
         hex: "#005faf",
         rgb: "rgb(0,95,175)",
-        names: [:cobalt, :endeavour]
+        names: [:endeavour, :cobalt]
       },
       %{
         code: 26,
         hex: "#005fd7",
         rgb: "rgb(0,95,215)",
-        names: [:navy_blue, :science_blue]
+        names: [:science_blue, :navy_blue]
       },
       %{
         code: 27,
@@ -196,7 +198,7 @@ config :io_ansi_plus,
         code: 29,
         hex: "#00875f",
         rgb: "rgb(0,135,95)",
-        names: [:deep_sea, :observatory]
+        names: [:observatory, :deep_sea]
       },
       %{
         code: 30,
@@ -244,7 +246,7 @@ config :io_ansi_plus,
         code: 37,
         hex: "#00afaf",
         rgb: "rgb(0,175,175)",
-        names: [:bondi_blue, :light_sea_green]
+        names: [:light_sea_green, :bondi_blue]
       },
       %{
         code: 38,
@@ -400,7 +402,7 @@ config :io_ansi_plus,
         code: 63,
         hex: "#5f5fff",
         rgb: "rgb(95,95,255)",
-        names: [:neon_blue, :royal_blue]
+        names: [:royal_blue, :neon_blue]
       },
       %{
         code: 64,
@@ -436,7 +438,7 @@ config :io_ansi_plus,
         code: 69,
         hex: "#5f87ff",
         rgb: "rgb(95,135,255)",
-        names: [:cornflower_blue, :light_slate_blue]
+        names: [:light_slate_blue, :cornflower_blue]
       },
       %{
         code: 70,
@@ -580,7 +582,7 @@ config :io_ansi_plus,
         code: 93,
         hex: "#8700ff",
         rgb: "rgb(135,0,255)",
-        names: [:purple]
+        names: [:electric_violet]
       },
       %{
         code: 94,
@@ -790,7 +792,7 @@ config :io_ansi_plus,
         code: 128,
         hex: "#af00d7",
         rgb: "rgb(175,0,215)",
-        names: [:electric_violet]
+        names: []
       },
       %{
         code: 129,
@@ -880,7 +882,7 @@ config :io_ansi_plus,
         code: 143,
         hex: "#afaf5f",
         rgb: "rgb(175,175,95)",
-        names: [:dark_khaki, :olive_green]
+        names: [:olive_green, :dark_khaki]
       },
       %{
         code: 144,
@@ -1054,7 +1056,7 @@ config :io_ansi_plus,
         code: 172,
         hex: "#d78700",
         rgb: "rgb(215,135,0)",
-        names: [:chocolate, :mango_tango]
+        names: [:mango_tango, :chocolate]
       },
       %{
         code: 173,
@@ -1090,7 +1092,7 @@ config :io_ansi_plus,
         code: 178,
         hex: "#d7af00",
         rgb: "rgb(215,175,0)",
-        names: [:corn, :golden_poppy, :goldenrod]
+        names: [:golden_poppy, :goldenrod, :corn]
       },
       %{
         code: 179,
@@ -1186,7 +1188,7 @@ config :io_ansi_plus,
         code: 194,
         hex: "#d7ffd7",
         rgb: "rgb(215,255,215)",
-        names: [:beige, :honeydew]
+        names: [:honeydew, :beige]
       },
       %{
         code: 195,
@@ -1234,7 +1236,7 @@ config :io_ansi_plus,
         code: 202,
         hex: "#ff5f00",
         rgb: "rgb(255,95,0)",
-        names: [:orange_red, :safety_orange]
+        names: [:safety_orange, :orange_red]
       },
       %{
         code: 203,
@@ -1312,13 +1314,13 @@ config :io_ansi_plus,
         code: 215,
         hex: "#ffaf5f",
         rgb: "rgb(255,175,95)",
-        names: [:rajah, :sandy_brown]
+        names: [:sandy_brown, :rajah]
       },
       %{
         code: 216,
         hex: "#ffaf87",
         rgb: "rgb(255,175,135)",
-        names: [:macaroni_and_cheese]
+        names: [:macaroni_and_cheese, :hit_pink]
       },
       %{
         code: 217,
@@ -1354,13 +1356,13 @@ config :io_ansi_plus,
         code: 222,
         hex: "#ffd787",
         rgb: "rgb(255,215,135)",
-        names: [:khaki, :salomie]
+        names: [:salomie, :khaki]
       },
       %{
         code: 223,
         hex: "#ffd7af",
         rgb: "rgb(255,215,175)",
-        names: [:moccasin, :navajo_white]
+        names: [:navajo_white, :moccasin]
       },
       %{
         code: 224,
@@ -1402,7 +1404,7 @@ config :io_ansi_plus,
         code: 230,
         hex: "#ffffd7",
         rgb: "rgb(255,255,215)",
-        names: [:cream, :cumulus]
+        names: [:cumulus, :cream]
       },
       %{
         code: 231,
@@ -1462,7 +1464,7 @@ config :io_ansi_plus,
         code: 240,
         hex: "#585858",
         rgb: "rgb(88,88,88)",
-        names: [:mortar, :scorpion]
+        names: [:scorpion, :mortar]
       },
       %{
         code: 241,
@@ -1552,7 +1554,7 @@ config :io_ansi_plus,
         code: 255,
         hex: "#eeeeee",
         rgb: "rgb(238,238,238)",
-        names: [:gallery, :white_smoke]
+        names: [:white_smoke, :gallery]
       }
     ]
     |> Enum.reduce(%{}, fn
