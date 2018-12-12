@@ -73,4 +73,8 @@ alias IO.ANSI.Plus, as: ANSI
 ## ![examples](images/io_ansi_plus_examples.png)
 
 ## Color Chart
-## ![color_chart](images/color_chart.png)
+
+<div class="img-zoom-container">
+  ## ![color_chart](images/color_chart.png)
+  <div id="zoom-result" class="img-zoom-result"></div>
+</div>
