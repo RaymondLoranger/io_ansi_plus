@@ -32,7 +32,7 @@ defmodule IO.ANSI.Plus.IE do
   @spec print_standard_colors(pos_integer, pos_integer) :: :ok
   def print_standard_colors(squares_per_row, column_width) do
     for row <- standard_color_rows(squares_per_row) do
-      Enum.each(row, &print_square(&1, column_width, _with_codes? = false))
+      Enum.each(row, &print_square(&1, column_width, _with_code = false))
       IO.write("\n")
     end
 
@@ -42,7 +42,7 @@ defmodule IO.ANSI.Plus.IE do
   @spec print_xterm_colors(Range.t(), pos_integer, pos_integer) :: :ok
   def print_xterm_colors(%Range{} = range, squares_per_row, column_width) do
     for row <- xterm_color_rows(range, squares_per_row) do
-      Enum.each(row, &print_square(&1, column_width, _with_codes? = true))
+      Enum.each(row, &print_square(&1, column_width, _with_code? = true))
       IO.write("\n")
     end
 
@@ -75,19 +75,14 @@ defmodule IO.ANSI.Plus.IE do
 
   ## Private functions
 
-  @spec fave_names :: %{atom => non_neg_integer}
-  defp fave_names do
+  @spec fave_name_codes :: %{non_neg_integer => atom}
+  defp fave_name_codes do
     :io_ansi_plus
     |> Application.get_env(:colors)
     |> Enum.reduce(%{}, fn
-      %{names: []}, acc -> acc
-      %{code: code, names: [name | _]}, acc -> Map.put(acc, name, code)
+      %{code: _code, names: []}, acc -> acc
+      %{code: code, names: [name | _]}, acc -> Map.put(acc, code, name)
     end)
-  end
-
-  @spec fave_name_codes :: %{non_neg_integer => atom}
-  defp fave_name_codes do
-    fave_names() |> Map.new(fn {name, code} -> {code, name} end)
   end
 
   @spec standard_color_rows(pos_integer) :: [keyword(non_neg_integer)]

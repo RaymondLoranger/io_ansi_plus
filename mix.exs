@@ -4,7 +4,7 @@ defmodule IO.ANSI.Plus.MixProject do
   def project do
     [
       app: :io_ansi_plus,
-      version: "0.1.19",
+      version: "0.1.20",
       elixir: "~> 1.6",
       start_permanent: Mix.env() == :prod,
       name: "IO ANSI Plus",
@@ -45,7 +45,7 @@ defmodule IO.ANSI.Plus.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:nimble_parsec, "~> 0.4.0"},
+      # {:nimble_parsec, "~> 0.4.0"},
       {:mix_tasks,
        github: "RaymondLoranger/mix_tasks", only: :dev, runtime: false},
       {:persist_config, "~> 0.1"},

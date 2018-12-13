@@ -1546,15 +1546,16 @@ config :io_ansi_plus,
   color_codes: %{
     maroon: 1,
     navy: 4,
+    purple: 5,
     fresh_eggplant: 5,
     teal: 6,
     lime: 10,
     __in_between__: :__etcetera__,
     alto: 252,
-    gainsboro: 254,
     mercury: 254,
-    gallery: 255,
-    white_smoke: 255
+    gainsboro: 254,
+    white_smoke: 255,
+    gallery: 255
   }
 
 # Actual configuration...
