@@ -19,7 +19,7 @@ end
 
 ## Notes
 
-In addition to the 16 regular ANSI colors<sup>[*](#footnote1)</sup> and
+In addition to the 16 standard ANSI colors<sup>[1](#footnote1)</sup> and
 their background counterparts, this package also supports the 256 Xterm colors
 (foreground and background).
 
@@ -27,6 +27,8 @@ Most of these 256 colors were given names like:
 - ![#00ffff](https://placehold.it/15/00ffff/000000?text=+)`:aqua`
 - ![#87ff00](https://placehold.it/15/87ff00/000000?text=+)`:chartreuse`
 - ![#d700ff](https://placehold.it/15/d700ff/000000?text=+)`:psychedelic_purple`
+
+For the full list of color names, see the **Color Samples** section below.
 
 You can use color number atoms for the few colors that are unnamed:
 
@@ -36,11 +38,11 @@ alias IO.ANSI.Plus, as: ANSI
 ["Hello, ", :color163_background, "world!"] |> ANSI.format(true) |> IO.puts()
 ```
 
-Any color can have multiple names, for example, `:moccasin` and `:navajo_white`.
+Any color can have multiple names, for example, `:moccasin` and `:navajo_white` for color code 223.
 
 For details, see file `config/persist_colors.exs`.
 
-<sup><a name="footnote1">*</a></sup> Actually 8 colors and their "bright" variants.
+<sup><a name="footnote1">1</a></sup> Actually 8 colors and their "bright" variants.
 
 ## Customization
 
