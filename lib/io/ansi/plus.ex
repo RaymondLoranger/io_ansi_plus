@@ -17,6 +17,8 @@ defmodule IO.ANSI.Plus do
 
   import IO.ANSI.Sequence
 
+  @color_codes get_env(:color_codes)
+
   @type ansicode :: atom
   @type ansilist ::
           maybe_improper_list(
@@ -24,8 +26,6 @@ defmodule IO.ANSI.Plus do
             binary | ansicode | []
           )
   @type ansidata :: ansilist | ansicode | binary
-
-  @color_codes Application.get_env(@app, :color_codes)
 
   @doc """
   Checks if ANSI coloring is supported and enabled on this machine.
@@ -262,7 +262,7 @@ defmodule IO.ANSI.Plus do
   performed. If you don't want this behaviour, use `format_fragment/2`.
 
   An optional boolean parameter can be passed to enable or disable
-  emitting actual ANSI codes. When `false`, no ANSI codes will emitted.
+  emitting actual ANSI codes. When `false`, no ANSI codes will be emitted.
   By default checks if ANSI is enabled using the `enabled?/0` function.
 
   ## Examples

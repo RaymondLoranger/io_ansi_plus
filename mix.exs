@@ -4,8 +4,8 @@ defmodule IO.ANSI.Plus.MixProject do
   def project do
     [
       app: :io_ansi_plus,
-      version: "0.1.22",
-      elixir: "~> 1.6",
+      version: "0.1.23",
+      elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
       name: "IO ANSI Plus",
       source_url: source_url(),
@@ -48,10 +48,9 @@ defmodule IO.ANSI.Plus.MixProject do
       # {:nimble_parsec, "~> 0.4.0"},
       {:mix_tasks,
        github: "RaymondLoranger/mix_tasks", only: :dev, runtime: false},
-      {:persist_config, "~> 0.1"},
-      {:earmark, "~> 1.0", only: :dev},
-      {:ex_doc, "~> 0.14", only: :dev, runtime: false},
-      {:dialyxir, "~> 0.5", only: :dev, runtime: false}
+      {:ex_doc, "~> 0.22", only: :dev, runtime: false},
+      {:dialyxir, "~> 1.0", only: :dev, runtime: false},
+      {:persist_config, "~> 0.4", runtime: false}
     ]
   end
 end
