@@ -1,7 +1,11 @@
 defmodule IO.ANSI.Plus.IE do
   @moduledoc false
 
+  use PersistConfig
+
   alias IO.ANSI.Plus, as: ANSI
+
+  @colors get_env(:colors)
 
   defmacro __using__(_options) do
     quote do
@@ -14,9 +18,7 @@ defmodule IO.ANSI.Plus.IE do
 
   @spec color_samples :: [String.t()]
   def color_samples do
-    :io_ansi_plus
-    |> Application.get_env(:colors)
-    |> Enum.map(fn %{code: code, hex: hex, names: names} ->
+    Enum.map(@colors, fn %{code: code, hex: hex, names: names} ->
       "#" <> hex_val = hex
 
       "- ![#{hex}](https://placehold.it/15/#{hex_val}/000000?text=+)" <>
@@ -60,9 +62,7 @@ defmodule IO.ANSI.Plus.IE do
   @spec names_for_code(0..255) :: [atom]
   def names_for_code(code) when code in 0..255 do
     names =
-      :io_ansi_plus
-      |> Application.get_env(:colors)
-      |> Enum.find_value(fn %{code: color_code, names: names} ->
+      Enum.find_value(@colors, fn %{code: color_code, names: names} ->
         if color_code == code, do: names
       end)
 
@@ -77,9 +77,7 @@ defmodule IO.ANSI.Plus.IE do
 
   @spec fave_name_codes :: %{non_neg_integer => atom}
   defp fave_name_codes do
-    :io_ansi_plus
-    |> Application.get_env(:colors)
-    |> Enum.reduce(%{}, fn
+    Enum.reduce(@colors, %{}, fn
       %{code: _code, names: []}, acc -> acc
       %{code: code, names: [name | _]}, acc -> Map.put(acc, code, name)
     end)
