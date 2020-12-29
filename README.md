@@ -24,9 +24,9 @@ their background counterparts, this package also supports the 256 Xterm colors
 (foreground and background).
 
 Most of these 256 colors were given names like:
-- ![#00ffff](https://placehold.it/15/00ffff/000000?text=+)`:aqua`
-- ![#87ff00](https://placehold.it/15/87ff00/000000?text=+)`:chartreuse`
-- ![#d700ff](https://placehold.it/15/d700ff/000000?text=+)`:psychedelic_purple`
+- <img src="images/00ffff.png"> `:aqua`
+- <img src="images/87ff00.png"> `:chartreuse`
+- <img src="images/d700ff.png"> `:psychedelic_purple`
 
 For the full list of color names, see the **Color Samples** section below.
 
