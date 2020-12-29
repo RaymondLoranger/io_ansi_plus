@@ -48,7 +48,7 @@ defmodule IO.ANSI.Plus.MixProject do
   defp deps do
     [
       {:dialyxir, "~> 1.0", only: :dev, runtime: false},
-      {:egd, github: "erlang/egd", runtime: false},
+      {:egd, github: "erlang/egd", only: :dev, runtime: false},
       {:ex_doc, "~> 0.22", only: :dev, runtime: false},
       {:mix_tasks,
        github: "RaymondLoranger/mix_tasks", only: :dev, runtime: false},
