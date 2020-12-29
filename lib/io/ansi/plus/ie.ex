@@ -16,14 +16,41 @@ defmodule IO.ANSI.Plus.IE do
     end
   end
 
-  @spec color_samples :: [String.t()]
+  @spec color_samples :: :ok
   def color_samples do
-    Enum.map(@colors, fn %{code: code, hex: hex, names: names} ->
-      "#" <> hex_val = hex
+    for %{code: code, hex: hex, names: names} <- @colors do
+      (~s'- <img src="images/#{hex}.png"> ' <>
+         "#{color_sample_names(code, names)} (#{code})")
+      |> IO.puts()
+    end
 
-      "- ![#{hex}](https://placehold.it/15/#{hex_val}/000000?text=+)" <>
-        "#{color_sample_names(code, names)} (#{code})"
-    end)
+    :ok
+  end
+
+  @spec delete_color_samples :: map
+  def delete_color_samples do
+    results =
+      for %{hex: hex} <- @colors do
+        {File.rm("images/#{hex}.png"), hex}
+      end
+
+    reduce(results)
+  end
+
+  @spec write_color_samples :: map
+  def write_color_samples do
+    image = :egd.create(12, 12)
+
+    results =
+      for %{hex: hex, rgb: rbg} <- @colors do
+        fill = :egd.color(rbg)
+        :ok = :egd.filledRectangle(image, {0, 0}, {12, 12}, fill)
+        binary = :egd.render(image)
+        {File.write("images/#{hex}.png", binary), hex}
+      end
+
+    :ok = :egd.destroy(image)
+    reduce(results)
   end
 
   @spec print_color_samples :: :ok
@@ -74,6 +101,19 @@ defmodule IO.ANSI.Plus.IE do
   end
 
   ## Private functions
+
+  @spec reduce([...]) :: map
+  defp reduce(results) do
+    Enum.reduce(results, %{}, fn
+      {:ok, _name}, acc ->
+        Map.update(acc, :ok, 1, &(&1 + 1))
+
+      {{:error, reason}, name}, acc ->
+        Map.update(acc, reason, {1, [name]}, fn {n, names} ->
+          {n + 1, [name | names]}
+        end)
+    end)
+  end
 
   @spec fave_name_codes :: %{non_neg_integer => atom}
   defp fave_name_codes do
