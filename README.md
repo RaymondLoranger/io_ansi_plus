@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/RaymondLoranger/io_ansi_plus.svg?branch=master)](https://travis-ci.org/RaymondLoranger/io_ansi_plus)
 
 Functionality to render ANSI escape sequences.
-Clone of module `IO.ANSI` but supporting named Xterm colors.
+Clone of [IO.ANSI][IO.ANSI] but supporting named Xterm colors.
 
 ## Installation
 
@@ -43,12 +43,6 @@ Any color can have multiple names, for example, `:moccasin` and `:navajo_white` 
 For details, see file `config/persist_colors.exs`.
 
 <sup><a name="footnote1">1</a></sup> Actually 8 colors and their "bright" variants.
-
-## Customization
-
-You can specify new color names by changing file `config/persist_colors.exs`.
-<br>You would then need to run `mix deps.compile io_ansi_plus [--force]`
-to make the changes effective.
 
 ## Shortcuts
 
@@ -334,3 +328,5 @@ alias IO.ANSI.Plus, as: ANSI
 - <img src="images/dadada.png"> `:color253` (253)
 - <img src="images/e4e4e4.png"> `:mercury` `:gainsboro` (254)
 - <img src="images/eeeeee.png"> `:white_smoke` `:gallery` (255)
+
+[IO.ANSI]: https://hexdocs.pm/elixir/IO.ANSI.html
