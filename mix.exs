@@ -11,7 +11,9 @@ defmodule IO.ANSI.Plus.MixProject do
       source_url: source_url(),
       description: description(),
       package: package(),
-      deps: deps()
+      deps: deps(),
+      # IO.ANSI.Plus.IE.write_color_samples/0...
+      dialyzer: [plt_add_apps: [:egd]]
     ]
   end
 
@@ -46,7 +48,7 @@ defmodule IO.ANSI.Plus.MixProject do
   defp deps do
     [
       {:dialyxir, "~> 1.0", only: :dev, runtime: false},
-      {:egd, github: "erlang/egd"},
+      {:egd, github: "erlang/egd", runtime: false},
       {:ex_doc, "~> 0.22", only: :dev, runtime: false},
       {:mix_tasks,
        github: "RaymondLoranger/mix_tasks", only: :dev, runtime: false},
