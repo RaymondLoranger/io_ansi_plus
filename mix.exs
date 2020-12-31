@@ -4,16 +4,16 @@ defmodule IO.ANSI.Plus.MixProject do
   def project do
     [
       app: :io_ansi_plus,
-      version: "0.1.29",
+      version: "0.1.30",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       name: "IO ANSI Plus",
       source_url: source_url(),
       description: description(),
       package: package(),
-      deps: deps(),
+      deps: deps()
       # IO.ANSI.Plus.IE.write_color_samples/0...
-      dialyzer: [plt_add_apps: [:egd]]
+      # dialyzer: [plt_add_apps: [:egd]]
     ]
   end
 
@@ -48,7 +48,7 @@ defmodule IO.ANSI.Plus.MixProject do
   defp deps do
     [
       {:dialyxir, "~> 1.0", only: :dev, runtime: false},
-      {:egd, github: "erlang/egd", only: :dev, runtime: false},
+      # {:egd, github: "erlang/egd", only: :dev, runtime: false},
       {:ex_doc, "~> 0.22", only: :dev, runtime: false},
       {:mix_tasks,
        github: "RaymondLoranger/mix_tasks", only: :dev, runtime: false},

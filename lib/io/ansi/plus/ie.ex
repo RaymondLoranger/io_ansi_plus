@@ -37,21 +37,21 @@ defmodule IO.ANSI.Plus.IE do
     reduce(results)
   end
 
-  @spec write_color_samples :: map
-  def write_color_samples do
-    image = :egd.create(12, 12)
+  # @spec write_color_samples :: map
+  # def write_color_samples do
+  #   image = :egd.create(12, 12)
 
-    results =
-      for %{hex: hex, rgb: rbg} <- @colors do
-        fill = :egd.color(rbg)
-        :ok = :egd.filledRectangle(image, {0, 0}, {12, 12}, fill)
-        binary = :egd.render(image)
-        {File.write("images/#{hex}.png", binary), hex}
-      end
+  #   results =
+  #     for %{hex: hex, rgb: rbg} <- @colors do
+  #       fill = :egd.color(rbg)
+  #       :ok = :egd.filledRectangle(image, {0, 0}, {12, 12}, fill)
+  #       binary = :egd.render(image)
+  #       {File.write("images/#{hex}.png", binary), hex}
+  #     end
 
-    :ok = :egd.destroy(image)
-    reduce(results)
-  end
+  #   :ok = :egd.destroy(image)
+  #   reduce(results)
+  # end
 
   @spec print_color_samples :: :ok
   def print_color_samples do
