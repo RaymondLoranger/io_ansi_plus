@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/RaymondLoranger/io_ansi_plus.svg?branch=master)](https://travis-ci.org/RaymondLoranger/io_ansi_plus)
 
 Functionality to render ANSI escape sequences.
-Clone of [IO.ANSI][IO.ANSI] but supporting named Xterm colors.
+Clone of module [IO.ANSI][IO.ANSI] but supporting named Xterm colors.
 
 ## Installation
 

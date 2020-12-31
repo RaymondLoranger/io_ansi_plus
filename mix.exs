@@ -24,7 +24,7 @@ defmodule IO.ANSI.Plus.MixProject do
   defp description do
     """
     Functionality to render ANSI escape sequences.
-    Clone of IO.ANSI but supporting named Xterm colors.
+    Clone of module IO.ANSI but supporting named Xterm colors.
     """
   end
 
