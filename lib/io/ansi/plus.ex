@@ -197,18 +197,22 @@ defmodule IO.ANSI.Plus do
 
   @spec gets(ansidata, boolean) :: IO.chardata() | IO.nodata()
   def gets(chardata, emit? \\ enabled?()) when is_boolean(emit?),
-    do: chardata |> format(emit?) |> IO.gets()
+    do: format(chardata, emit?) |> IO.gets()
 
   @spec puts(ansidata, boolean) :: :ok
   def puts(chardata, emit? \\ enabled?()) when is_boolean(emit?),
-    do: chardata |> format(emit?) |> IO.puts()
+    do: format(chardata, emit?) |> IO.puts()
 
   @spec write(ansidata, boolean) :: :ok
   def write(chardata, emit? \\ enabled?()) when is_boolean(emit?),
-    do: chardata |> format(emit?) |> IO.write()
+    do: format(chardata, emit?) |> IO.write()
 
-  defguardp valid?(line) when is_integer(line) and line >= 0
-  defguardp valid_move?(lines) when is_integer(lines) and lines >= 1
+  defguardp valid?(line, column)
+            when is_integer(line) and line >= 0 and
+                   is_integer(column) and column >= 0
+
+  defguardp valid?(lines_or_columns)
+            when is_integer(lines_or_columns) and lines_or_columns >= 1
 
   ## End of enhancements
 
@@ -242,24 +246,24 @@ defmodule IO.ANSI.Plus do
   Line `0` and column `0` would mean the top left corner.
   """
   @spec cursor(non_neg_integer, non_neg_integer) :: String.t()
-  def cursor(line, column) when valid?(line) and valid?(column),
+  def cursor(line, column) when valid?(line, column),
     do: "\e[#{line};#{column}H"
 
   @doc "Sends cursor `lines` up."
   @spec cursor_up(pos_integer) :: String.t()
-  def cursor_up(lines \\ 1) when valid_move?(lines), do: "\e[#{lines}A"
+  def cursor_up(lines \\ 1) when valid?(lines), do: "\e[#{lines}A"
 
   @doc "Sends cursor `lines` down."
   @spec cursor_down(pos_integer) :: String.t()
-  def cursor_down(lines \\ 1) when valid_move?(lines), do: "\e[#{lines}B"
+  def cursor_down(lines \\ 1) when valid?(lines), do: "\e[#{lines}B"
 
   @doc "Sends cursor `columns` to the right."
   @spec cursor_right(pos_integer) :: String.t()
-  def cursor_right(columns \\ 1) when valid_move?(columns), do: "\e[#{columns}C"
+  def cursor_right(columns \\ 1) when valid?(columns), do: "\e[#{columns}C"
 
   @doc "Sends cursor `columns` to the left."
   @spec cursor_left(pos_integer) :: String.t()
-  def cursor_left(columns \\ 1) when valid_move?(columns), do: "\e[#{columns}D"
+  def cursor_left(columns \\ 1) when valid?(columns), do: "\e[#{columns}D"
 
   @doc "Clears screen."
   defsequence(:clear, "2", "J")
