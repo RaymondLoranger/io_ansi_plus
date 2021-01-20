@@ -4,7 +4,7 @@ defmodule IO.ANSI.Plus.MixProject do
   def project do
     [
       app: :io_ansi_plus,
-      version: "0.1.31",
+      version: "0.1.32",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       name: "IO ANSI Plus",
@@ -50,8 +50,6 @@ defmodule IO.ANSI.Plus.MixProject do
       {:dialyxir, "~> 1.0", only: :dev, runtime: false},
       # {:egd, github: "erlang/egd", only: :dev, runtime: false},
       {:ex_doc, "~> 0.22", only: :dev, runtime: false},
-      {:mix_tasks,
-       github: "RaymondLoranger/mix_tasks", only: :dev, runtime: false},
       {:persist_config, "~> 0.4", runtime: false}
     ]
   end
