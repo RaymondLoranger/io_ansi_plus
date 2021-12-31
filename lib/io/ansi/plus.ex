@@ -207,12 +207,8 @@ defmodule IO.ANSI.Plus do
   def write(chardata, emit? \\ enabled?()) when is_boolean(emit?),
     do: format(chardata, emit?) |> IO.write()
 
-  defguardp valid?(line, column)
-            when is_integer(line) and line >= 0 and
-                   is_integer(column) and column >= 0
-
-  defguardp valid?(lines_or_columns)
-            when is_integer(lines_or_columns) and lines_or_columns >= 1
+  defguardp is_non_neg_integer(value) when is_integer(value) and value >= 0
+  defguardp is_pos_integer(value) when is_integer(value) and value > 0
 
   ## End of enhancements
 
@@ -246,24 +242,27 @@ defmodule IO.ANSI.Plus do
   Line `0` and column `0` would mean the top left corner.
   """
   @spec cursor(non_neg_integer, non_neg_integer) :: String.t()
-  def cursor(line, column) when valid?(line, column),
-    do: "\e[#{line};#{column}H"
+  def cursor(line, column)
+      when is_non_neg_integer(line) and is_non_neg_integer(column),
+      do: "\e[#{line};#{column}H"
 
   @doc "Sends cursor `lines` up."
   @spec cursor_up(pos_integer) :: String.t()
-  def cursor_up(lines \\ 1) when valid?(lines), do: "\e[#{lines}A"
+  def cursor_up(lines \\ 1) when is_pos_integer(lines), do: "\e[#{lines}A"
 
   @doc "Sends cursor `lines` down."
   @spec cursor_down(pos_integer) :: String.t()
-  def cursor_down(lines \\ 1) when valid?(lines), do: "\e[#{lines}B"
+  def cursor_down(lines \\ 1) when is_pos_integer(lines), do: "\e[#{lines}B"
 
   @doc "Sends cursor `columns` to the right."
   @spec cursor_right(pos_integer) :: String.t()
-  def cursor_right(columns \\ 1) when valid?(columns), do: "\e[#{columns}C"
+  def cursor_right(columns \\ 1) when is_pos_integer(columns),
+    do: "\e[#{columns}C"
 
   @doc "Sends cursor `columns` to the left."
   @spec cursor_left(pos_integer) :: String.t()
-  def cursor_left(columns \\ 1) when valid?(columns), do: "\e[#{columns}D"
+  def cursor_left(columns \\ 1) when is_pos_integer(columns),
+    do: "\e[#{columns}D"
 
   @doc "Clears screen."
   defsequence(:clear, "2", "J")
@@ -319,6 +318,7 @@ defmodule IO.ANSI.Plus do
     do_format(chardata, [], [], emit?, false)
   end
 
+  @dialyzer {:no_improper_lists, do_format: 5}
   defp do_format([term | rest], rem, acc, emit?, append_reset) do
     do_format(term, [rest | rem], acc, emit?, append_reset)
   end

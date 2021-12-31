@@ -16,15 +16,12 @@ defmodule IO.ANSI.Plus.IE do
     end
   end
 
-  @spec color_samples :: :ok
+  @spec color_samples :: [String.t()]
   def color_samples do
     for %{code: code, hex: hex, names: names} <- @colors do
-      (~s'- <img src="images/#{hex}.png"> ' <>
-         "#{color_sample_names(code, names)} (#{code})")
-      |> IO.puts()
+      ~s|- <img src="images/#{hex}.png"> | <>
+        "#{color_sample_names(code, names)} (#{code})"
     end
-
-    :ok
   end
 
   @spec delete_color_samples :: map
@@ -61,7 +58,7 @@ defmodule IO.ANSI.Plus.IE do
   @spec print_standard_colors(pos_integer, pos_integer) :: :ok
   def print_standard_colors(squares_per_row, column_width) do
     for row <- standard_color_rows(squares_per_row) do
-      Enum.each(row, &print_square(&1, column_width, _with_code = false))
+      Enum.each(row, &print_square(&1, column_width, _with_code? = false))
       IO.write("\n")
     end
 
@@ -115,8 +112,8 @@ defmodule IO.ANSI.Plus.IE do
     end)
   end
 
-  @spec fave_name_codes :: %{non_neg_integer => atom}
-  defp fave_name_codes do
+  @spec fave_names :: %{non_neg_integer => atom}
+  defp fave_names do
     Enum.reduce(@colors, %{}, fn
       %{code: _code, names: []}, acc -> acc
       %{code: code, names: [name | _]}, acc -> Map.put(acc, code, name)
@@ -139,10 +136,8 @@ defmodule IO.ANSI.Plus.IE do
 
   @spec xterm_color_rows(Range.t(), pos_integer) :: [keyword(non_neg_integer)]
   defp xterm_color_rows(%Range{} = range, squares_per_row) do
-    codes = fave_name_codes()
-
     for i <- range do
-      if codes[i], do: {codes[i], i}, else: {:"color#{i}", i}
+      if fave_names()[i], do: {fave_names()[i], i}, else: {:"color#{i}", i}
     end
     |> Enum.chunk_every(squares_per_row)
   end
@@ -189,7 +184,7 @@ defmodule IO.ANSI.Plus.IE do
     "#{inspect(name)}" |> adjust_text(column_width)
   end
 
-  defp text(name, code, column_width, _with_code? = true) do
+  defp text(name, code, column_width, _with_code?) do
     text = "#{inspect(name)} (#{code})"
 
     if String.length(text) > column_width - 1 do
