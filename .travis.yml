@@ -1,5 +1,0 @@
-language: elixir
-elixir:
-  - '1.14.3'
-otp_release:
-  - '24.2'
