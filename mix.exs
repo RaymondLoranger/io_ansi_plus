@@ -4,11 +4,7 @@ defmodule IO.ANSI.Plus.MixProject do
   def project do
     [
       app: :io_ansi_plus,
-<<<<<<< HEAD
-      version: "0.1.47",
-=======
-      version: "0.1.45",
->>>>>>> parent of 45171ef (0.1.46)
+      version: "0.1.48",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       name: "IO ANSI Plus",
