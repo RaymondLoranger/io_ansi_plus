@@ -23,6 +23,21 @@ defmodule IO.ANSI.Plus.IE do
     end
   end
 
+  @spec actual_color_samples :: [map]
+  def actual_color_samples do
+    for %{code: code, names: names} <- @colors do
+      [
+        %{
+          color:
+            ANSI.format([:"color#{code}", :"color#{code}_background", "WW"]),
+          names: "#{color_sample_names(code, names)} (#{code})"
+        },
+        %{color: "", names: ""}
+      ]
+    end
+    |> List.flatten()
+  end
+
   @spec delete_color_samples :: map
   def delete_color_samples do
     results =
