@@ -19,8 +19,7 @@ defmodule IO.ANSI.Plus.IE do
   @spec color_samples :: [String.t()]
   def color_samples do
     for %{code: code, hex: hex, names: names} <- @colors do
-      ~s|- <img src="images/#{hex}.png"> | <>
-        "#{color_sample_names(code, names)} (#{code})"
+      "- ![!](/images/#{hex}.png) #{color_sample_names(code, names)} (#{code})"
     end
   end
 
