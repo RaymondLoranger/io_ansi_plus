@@ -70,6 +70,6 @@ alias IO.ANSI.Plus, as: ANSI
 ## ![color_chart](/images/color_chart.png)
 
 ## Color Samples
-![color_samples](/images/color_samples.png)
+## ![color_samples](/images/color_samples.png)
 
 [IO.ANSI]: https://hexdocs.pm/elixir/IO.ANSI.html
