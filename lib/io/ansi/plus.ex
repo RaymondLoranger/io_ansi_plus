@@ -62,7 +62,7 @@ defmodule IO.ANSI.Plus do
   """
   @spec enabled? :: boolean
   def enabled? do
-    Application.get_env(:elixir, :ansi_enabled, false)
+    get_app_env(:elixir, :ansi_enabled, false)
   end
 
   @doc "Sets foreground color."
