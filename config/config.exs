@@ -13,4 +13,4 @@ import Config
 #
 # Otherwise, to allow mix messages in colors:
 #
-# config :elixir, ansi_enabled: true
+config :elixir, ansi_enabled: true

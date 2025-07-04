@@ -23,11 +23,11 @@ defmodule IO.ANSI.Plus do
       formatted_text = IO.ANSI.blue_background() <> "Example" <> IO.ANSI.reset()
       IO.puts(formatted_text)
 
-  A higher level and more convenient API is provided via `IO.ANSI.format/1`
+  A higher level and more convenient API is provided via `IO.ANSI.Plus.format/1`
   which accepts atoms to represent ANSI escape sequences and which, by default,
   checks if ANSI is enabled:
 
-      IO.puts(IO.ANSI.format([:blue_background, "Example"]))
+      IO.puts(IO.ANSI.Plus.format([:blue_background, "Example"]))
 
   In case ANSI is disabled, the ANSI escape sequences are simply discarded.
 
@@ -63,6 +63,34 @@ defmodule IO.ANSI.Plus do
   @spec enabled? :: boolean
   def enabled? do
     get_app_env(:elixir, :ansi_enabled, false)
+  end
+
+  @doc """
+  Syntax colors to be used by `Inspect`.
+
+  Those colors are used throughout Elixir's standard library,
+  such as `dbg/2` and `IEx`.
+
+  The colors can be changed by setting the `:ansi_syntax_colors`
+  in the `:elixir` application configuration. Configuration for
+  most built-in data types are supported: `:atom`, `:binary`,
+  `:boolean`, `:charlist`, `:list`, `:map`, `:nil`, `:number`,
+  `:string`, and `:tuple`. The default is:
+
+      [
+        atom: :cyan
+        boolean: :magenta,
+        charlist: :yellow,
+        nil: :magenta,
+        number: :yellow,
+        string: :green
+      ]
+
+  """
+  @doc since: "1.14.0"
+  @spec syntax_colors :: Keyword.t(ansidata)
+  def syntax_colors do
+    get_app_env(:elixir, :ansi_syntax_colors, [])
   end
 
   @doc "Sets foreground color."
@@ -282,7 +310,7 @@ defmodule IO.ANSI.Plus do
   The named sequences are represented by atoms.
 
   It will also append an `IO.ANSI.reset/0` to the chardata when a conversion is
-  performed. If you don't want this behaviour, use `format_fragment/2`.
+  performed. If you don't want this behavior, use `format_fragment/2`.
 
   An optional boolean parameter can be passed to enable or disable
   emitting actual ANSI codes. When `false`, no ANSI codes will be emitted.
