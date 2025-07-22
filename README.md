@@ -61,6 +61,8 @@ alias IO.ANSI.Plus, as: ANSI
 ["Hello, ", :purple, "world!"] |> ANSI.write(true)
 [:aqua, "Your move:", :reset, " "] |> ANSI.gets(true)
 ```
+## Note
+You can click on any of the 3 images below for a clearer view.
 
 ## Examples
 ## ![examples](/images/examples.png)
