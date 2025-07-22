@@ -26,7 +26,7 @@ background).
 - ![!](/images/87ff00.png) `:chartreuse`
 - ![!](/images/d700ff.png) `:psychedelic_purple`
 
-For the full list of color names, see the **Color Samples** section below. Most
+For the full list of color names, see the [Color Samples][Samples] section. Most
 of these color names are based on the post [Naming the 256 XTerm colors][Xterm].
 
 You can also use color number atoms instead of specific names:
@@ -76,3 +76,4 @@ You can click on any of the 3 images below for a clearer view.
 
 [IO.ANSI]: https://hexdocs.pm/elixir/IO.ANSI.html
 [Xterm]: https://www.wowsignal.io/articles/xterm256
+[Samples]: https://github.com/RaymondLoranger/io_ansi_plus?tab=readme-ov-file#color-samples
