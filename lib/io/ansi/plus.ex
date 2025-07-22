@@ -23,11 +23,11 @@ defmodule IO.ANSI.Plus do
       formatted_text = IO.ANSI.blue_background() <> "Example" <> IO.ANSI.reset()
       IO.puts(formatted_text)
 
-  A higher level and more convenient API is provided via `IO.ANSI.Plus.format/1`
+  A higher level and more convenient API is provided via `IO.ANSI.format/1`
   which accepts atoms to represent ANSI escape sequences and which, by default,
   checks if ANSI is enabled:
 
-      IO.puts(IO.ANSI.Plus.format([:blue_background, "Example"]))
+      IO.puts(IO.ANSI.format([:blue_background, "Example"]))
 
   In case ANSI is disabled, the ANSI escape sequences are simply discarded.
 
@@ -39,8 +39,6 @@ defmodule IO.ANSI.Plus do
   """
 
   use PersistConfig
-
-  import IO.ANSI.Sequence
 
   @color_codes get_env(:color_codes)
 
@@ -121,84 +119,102 @@ defmodule IO.ANSI.Plus do
     color_background(16 + 36 * r + 6 * g + b)
   end
 
+  # Anonymous functions cannot have optional arguments...
+  defsequence = fn name, code, terminator ->
+    @spec unquote(name)() :: String.t()
+    def unquote(name)() do
+      "\e[#{unquote(code)}#{unquote(terminator)}"
+    end
+
+    defp format_sequence(unquote(name)) do
+      unquote(name)()
+    end
+  end
+
   @doc "Resets all attributes."
-  defsequence(:reset, 0)
+  defsequence.(:reset, 0, "m")
 
   @doc "Bright (increased intensity) or bold."
-  defsequence(:bright, 1)
+  defsequence.(:bright, 1, "m")
 
   @doc "Faint (decreased intensity). Not widely supported."
-  defsequence(:faint, 2)
+  defsequence.(:faint, 2, "m")
 
   @doc "Italic: on. Not widely supported. Sometimes treated as inverse."
-  defsequence(:italic, 3)
+  defsequence.(:italic, 3, "m")
 
   @doc "Underline: single."
-  defsequence(:underline, 4)
+  defsequence.(:underline, 4, "m")
 
   @doc "Blink: slow. Less than 150 per minute."
-  defsequence(:blink_slow, 5)
+  defsequence.(:blink_slow, 5, "m")
 
   @doc """
   Blink: rapid. MS-DOS ANSI.SYS; 150 per minute or more; not widely supported.
   """
-  defsequence(:blink_rapid, 6)
+  defsequence.(:blink_rapid, 6, "m")
 
   @doc "Image: negative. Swap foreground and background."
-  defsequence(:inverse, 7)
+  defsequence.(:inverse, 7, "m")
 
   @doc "Image: negative. Swap foreground and background."
-  defsequence(:reverse, 7)
+  defsequence.(:reverse, 7, "m")
 
   @doc "Conceal. Not widely supported."
-  defsequence(:conceal, 8)
+  defsequence.(:conceal, 8, "m")
 
   @doc """
   Crossed-out. Characters legible, but marked for deletion.
   Not widely supported.
   """
-  defsequence(:crossed_out, 9)
+  defsequence.(:crossed_out, 9, "m")
 
   @doc "Sets primary (default) font."
-  defsequence(:primary_font, 10)
+  defsequence.(:primary_font, 10, "m")
 
   for font_n <- [1, 2, 3, 4, 5, 6, 7, 8, 9] do
     @doc "Sets alternative font #{font_n}."
-    defsequence(:"font_#{font_n}", font_n + 10)
+    defsequence.(:"font_#{font_n}", font_n + 10, "m")
   end
 
   @doc "Normal color or intensity."
-  defsequence(:normal, 22)
+  defsequence.(:normal, 22, "m")
 
   @doc "Not italic."
-  defsequence(:not_italic, 23)
+  defsequence.(:not_italic, 23, "m")
 
   @doc "Underline: none."
-  defsequence(:no_underline, 24)
+  defsequence.(:no_underline, 24, "m")
 
   @doc "Blink: off."
-  defsequence(:blink_off, 25)
+  defsequence.(:blink_off, 25, "m")
 
   @doc "Image: positive. Normal foreground and background."
-  defsequence(:inverse_off, 27)
+  defsequence.(:inverse_off, 27, "m")
 
   @doc "Image: positive. Normal foreground and background."
-  defsequence(:reverse_off, 27)
+  defsequence.(:reverse_off, 27, "m")
+
+  @doc "Reveal: Not concealed."
+  defsequence.(:reveal, 28, "m")
+
+  @doc "Not crossed-out."
+  defsequence.(:not_crossed_out, 29, "m")
 
   colors = [:black, :red, :green, :yellow, :blue, :magenta, :cyan, :white]
 
   for {color, code} <- Enum.with_index(colors) do
     @doc "Sets foreground color to #{color}."
-    defsequence(color, code + 30)
+    defsequence.(color, code + 30, "m")
 
     @doc "Sets foreground color to light #{color}."
-    defsequence(:"light_#{color}", code + 90)
+    defsequence.(:"light_#{color}", code + 90, "m")
 
     @doc "Sets background color to #{color}."
-    defsequence(:"#{color}_background", code + 40)
+    defsequence.(:"#{color}_background", code + 40, "m")
 
     @doc "Sets background color to light #{color}."
-    defsequence(:"light_#{color}_background", code + 100)
+    defsequence.(:"light_#{color}_background", code + 100, "m")
   end
 
   ## Beginning of enhancements
@@ -206,21 +222,21 @@ defmodule IO.ANSI.Plus do
   for code <- 0..255 do
     # def color0(), do: "\e[38;5;0m"
     # defp format_sequence(:color0), do: color0()
-    defsequence(:"color#{code}", "38;5;#{code}")
+    defsequence.(:"color#{code}", "38;5;#{code}", "m")
 
     # def color0_background(), do: "\e[48;5;0m"
     # defp format_sequence(:color0_background), do: color0_background()
-    defsequence(:"color#{code}_background", "48;5;#{code}")
+    defsequence.(:"color#{code}_background", "48;5;#{code}", "m")
   end
 
   for {color, code} <- @color_codes do
     # def chartreuse(), do: "\e[38;5;118m"
     # defp format_sequence(:chartreuse), do: chartreuse()
-    defsequence(color, "38;5;#{code}")
+    defsequence.(color, "38;5;#{code}", "m")
 
     # def chartreuse_background(), do: "\e[48;5;118m"
     # defp format_sequence(:chartreuse_background), do: chartreuse_background()
-    defsequence(:"#{color}_background", "48;5;#{code}")
+    defsequence.(:"#{color}_background", "48;5;#{code}", "m")
   end
 
   @spec gets(ansidata, boolean) :: IO.chardata() | IO.nodata()
@@ -241,28 +257,34 @@ defmodule IO.ANSI.Plus do
   ## End of enhancements
 
   @doc "Default text color."
-  defsequence(:default_color, 39)
+  defsequence.(:default_color, 39, "m")
 
   @doc "Default background color."
-  defsequence(:default_background, 49)
+  defsequence.(:default_background, 49, "m")
 
   @doc "Framed."
-  defsequence(:framed, 51)
+  defsequence.(:framed, 51, "m")
 
   @doc "Encircled."
-  defsequence(:encircled, 52)
+  defsequence.(:encircled, 52, "m")
 
   @doc "Overlined."
-  defsequence(:overlined, 53)
+  defsequence.(:overlined, 53, "m")
 
   @doc "Not framed or encircled."
-  defsequence(:not_framed_encircled, 54)
+  defsequence.(:not_framed_encircled, 54, "m")
 
   @doc "Not overlined."
-  defsequence(:not_overlined, 55)
+  defsequence.(:not_overlined, 55, "m")
+
+  @doc "Clears screen."
+  defsequence.(:clear, "2", "J")
+
+  @doc "Clears line."
+  defsequence.(:clear_line, "2", "K")
 
   @doc "Sends cursor home."
-  defsequence(:home, "", "H")
+  defsequence.(:home, "", "H")
 
   @doc """
   Sends cursor to the absolute position specified by `line` and `column`.
@@ -291,12 +313,6 @@ defmodule IO.ANSI.Plus do
   @spec cursor_left(pos_integer) :: String.t()
   def cursor_left(columns \\ 1) when is_pos_integer(columns),
     do: "\e[#{columns}D"
-
-  @doc "Clears screen."
-  defsequence(:clear, "2", "J")
-
-  @doc "Clears line."
-  defsequence(:clear_line, "2", "K")
 
   defp format_sequence(other) do
     raise ArgumentError,
