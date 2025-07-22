@@ -21,7 +21,7 @@ In addition to the 16 standard ANSI colors<sup>[1](#footnote1)</sup> and
 their background counterparts, this package also supports the 256 Xterm colors
 (foreground and background).
 
-All of these 256 colors were given names like:
+<ins>All</ins> of these 256 colors were given names like:
 - ![!](/images/00ffff.png) `:aqua`
 - ![!](/images/87ff00.png) `:chartreuse`
 - ![!](/images/d700ff.png) `:psychedelic_purple`
@@ -36,10 +36,8 @@ alias IO.ANSI.Plus, as: ANSI
 ["Hi, ", :color163_background, "world!"] |> ANSI.format(true) |> IO.puts()
 ```
 
-Any color can have multiple names, for example, `:moccasin` and `:navajo_white`
+Most colors have <ins>multiple</ins> names, for example, `:moccasin` and `:navajo_white`
 for color code 223.
-
-For details, see file `config/persist_colors.exs`.
 
 <sup><a name="footnote1">1</a></sup> Actually 8 colors and their "bright" variants.
 
@@ -65,23 +63,12 @@ alias IO.ANSI.Plus, as: ANSI
 ```
 
 ## Examples
-## ![examples](/images/io_ansi_plus_examples.png)
+## ![examples](/images/examples.png)
 
 ## Color Chart
-## ![color_chart](/images/new_chart.png)
-
-```
-String.upcase("srgdfgdfgdhdhzfgdgdgDRgdgdfdgdSdgSdfsdfsdfsSgDSDfsdfsdgfsdgSDfsdsdfsdsfdssdfsdsdsdsdsdsdssdsdsdsdsddssdsdsdSDFDS")
-```
-
-```
-![color_chart](/images/new_chart.png)
-```
-
-<img src="images/new_chart.png" style="width:150%; height:auto; overflow:auto;">
+## ![color_chart](/images/color_chart.png)
 
 ## Color Samples
-## ![color_samples](/images/new_samples.png)
-## ![color_samples](/images/test.png)
+## ![color_samples](/images/color_samples.png)
 
 [IO.ANSI]: https://hexdocs.pm/elixir/IO.ANSI.html
