@@ -1,0 +1,1204 @@
+black	#000000
+vantablack	#000000
+registration black	#000000
+black hole	#000000
+armor wash	#000000
+reversed grey	#080808
+accursed black	#080808
+badab black wash	#080808
+black metal	#080808
+existential angst	#080808
+dark tone ink	#121212
+sticky black tarmac	#121212
+dreamless sleep	#121212
+cursed black	#121212
+glimpse into space	#121212
+eerie black	#1c1c1c
+coco’s black	#1c1c1c
+gluon grey	#1c1c1c
+siyâh black	#1c1c1c
+dynamic black	#1c1c1c
+nero	#262626
+bitter liquorice	#262626
+dire wolf	#262626
+bokara grey	#262626
+darth vader	#262626
+off black	#303030
+tricorn black	#303030
+coated	#303030
+tap shoe	#303030
+black cat	#303030
+dead pixel	#3a3a3a
+black liquorice	#3a3a3a
+boltgun metal	#3a3a3a
+montana	#3a3a3a
+limousine leather	#3a3a3a
+goshawk grey	#444444
+medium black	#444444
+greenish black	#444444
+machine gun metal	#444444
+vulcanized	#444444
+black oak	#4e4e4e
+charadon granite	#4e4e4e
+perle noir	#4e4e4e
+thunder	#4e4e4e
+fiftieth shade of grey	#4e4e4e
+shadow mountain	#585858
+charcoal dust	#585858
+sumi ink	#585858
+carbon dating	#585858
+industrial grey	#585858
+rhine castle	#5f5f5f
+shades on	#5f5f5f
+charcoal smudge	#5f5f5f
+iron	#5f5f5f
+hematite	#5f5f5f
+kettleman	#626262
+grizzle grey	#626262
+digital	#626262
+roycroft pewter	#626262
+tornado wind	#626262
+dove grey	#6c6c6c
+scapa flow	#6c6c6c
+boat anchor	#6c6c6c
+shadows	#6c6c6c
+dark ash	#6c6c6c
+lucky grey	#767676
+sonic silver	#767676
+steel wool	#767676
+iron mountain	#767676
+riverstone	#767676
+grey	#808080
+pound sterling	#808080
+mt. rushmore	#808080
+trolley grey	#808080
+captain nemo	#808080
+mithril	#878787
+lunar base	#878787
+looking glass	#878787
+argent	#8a8a8a
+jumbo	#878787
+wild dove	#8a8a8a
+falcon grey	#8a8a8a
+heavy rain	#8a8a8a
+pewter ring	#8a8a8a
+grey shingle	#949494
+moonlit orchid	#949494
+grey summit	#949494
+nickel	#949494
+shark fin	#949494
+mortar grey	#9e9e9e
+smoky tone	#9e9e9e
+waiting	#9e9e9e
+cold grey	#9e9e9e
+hugh’s hue	#9e9e9e
+uniform grey	#a8a8a8
+nosferatu	#a8a8a8
+elephant in the room	#a8a8a8
+ultimate grey	#a8a8a8
+moon landing	#a8a8a8
+smoke screen	#afafaf
+aluminum sky	#afafaf
+bombay	#afafaf
+industrial age	#afafaf
+tin foil	#afafaf
+tangled web	#b2b2b2
+palladium	#b2b2b2
+silverstone	#b2b2b2
+harbour fog	#b2b2b2
+praise giving	#b2b2b2
+dust to dust	#bcbcbc
+glacier grey	#bcbcbc
+gravel fint	#bcbcbc
+alaskan grey	#bcbcbc
+anti rainbow grey	#bcbcbc
+silver	#c0c0c0
+stonewall grey	#c0c0c0
+waxwing	#c0c0c0
+silver tipped sage	#c0c0c0
+neo tokyo grey	#c0c0c0
+silver polish	#c6c6c6
+autonomous	#c6c6c6
+dreamscape grey	#c6c6c6
+paternoster	#c6c6c6
+lunar rock	#c6c6c6
+ancestral water	#d0d0d0
+cool elegance	#d0d0d0
+clouded vision	#d0d0d0
+american silver	#d0d0d0
+white metal	#d0d0d0
+cape hope	#d7d7d7
+silver medal	#d7d7d7
+tundra	#d7d7d7
+windchill	#d7d7d7
+desired dawn	#d7d7d7
+porpoise	#dadada
+subtle touch	#dadada
+urban snowfall	#dadada
+orochimaru	#dadada
+silver setting	#dadada
+titanium white	#e4e4e4
+windswept beach	#e4e4e4
+tripoli white	#e4e4e4
+grey whisper	#e4e4e4
+cold morning	#e4e4e4
+super silver	#eeeeee
+white whale	#eeeeee
+essence of violet	#eeeeee
+crystal bell	#eeeeee
+white edgar	#eeeeee
+white	#ffffff
+white as heaven	#ffffff
+whitecap snow	#ffffff
+pale grey	#ffffff
+polar bear in a blizzard	#ffffff
+we peep	#ffd7d7
+forgotten pink	#ffd7d7
+cottagecore sunset	#ffd7d7
+go go pink	#ffd7d7
+satin ribbon	#ffd7d7
+mary rose	#d7afaf
+radiant rouge	#d7afaf
+victoriana	#d7afaf
+pale persimmon	#d7afaf
+ballet rose	#d7afaf
+woodrose	#af8787
+orchid red	#af8787
+warm comfort	#af8787
+audrey’s blush	#af8787
+retro pink	#af8787
+rabbit paws	#875f5f
+aged beech	#875f5f
+tarsier	#875f5f
+forbidden thrill	#875f5f
+rose garland	#875f5f
+fancy flamingo	#ffafaf
+cornflower lilac	#ffafaf
+wildflower bouquet	#ffafaf
+peach bud	#ffafaf
+apricot haze	#ffafaf
+peaches of immortality	#d78787
+copperfield	#d78787
+rhubarb pie	#d78787
+finest blush	#d78787
+mauve glow	#d78787
+italian villa	#af5f5f
+poppy prose	#af5f5f
+sienna red	#af5f5f
+cinnamon candle	#af5f5f
+spiced tea	#af5f5f
+red mull	#ff8787
+coral trails	#ff8787
+tulip	#ff8787
+prime pink	#ff8787
+camaron pink	#ff8787
+roman	#d75f5f
+happy hearts	#d75f5f
+salami slice	#d75f5f
+deep sea coral	#d75f5f
+tory red	#d75f5f
+fusion red	#ff5f5f
+pineapple salmon	#ff5f5f
+pompelmo	#ff5f5f
+pastel red	#ff5f5f
+grapefruit	#ff5f5f
+spikey red	#5f0000
+red blood	#5f0000
+vampire hunter	#5f0000
+soooo bloody	#5f0000
+khorne red	#5f0000
+maroon	#800000
+salami	#800000
+dark red	#870000
+sacrifice altar	#870000
+chanticleer	#870000
+glass bull	#870000
+scab red	#870000
+red door	#af0000
+velvet volcano	#af0000
+heartbeat	#af0000
+artful red	#af0000
+red pentacle	#af0000
+red republic	#d70000
+rosso corsa	#d70000
+hot fever	#d70000
+red pegasus	#d70000
+red epiphyllum	#d70000
+red	#ff0000
+rainbow’s outer rim	#ff0000
+fire engine	#ff0000
+encarnado	#ff0000
+left on red	#ff0000
+after burn	#ff875f
+pink fire	#ff875f
+protein high	#ff875f
+mango orange	#ff875f
+nectarine	#ff875f
+spice pink	#ffaf87
+sunset over the alps	#ffaf87
+super sepia	#ffaf87
+coral correlation	#ffaf87
+coral dusk	#ffaf87
+bright sienna	#d7875f
+copper tan	#d7875f
+harvest time	#d7875f
+georgian leather	#d7875f
+show business	#d7875f
+vivid orange	#ff5f00
+maximum orange	#ff5f00
+molten core	#ff5f00
+safety orange	#ff5f00
+willpower orange	#ff5f00
+exuberance	#d75f00
+ancient bamboo	#d75f00
+orange danger	#d75f00
+raging leaf	#d75f00
+tenné	#d75f00
+delicious melon	#ffd7af
+acini di pepe	#ffd7af
+venus deathtrap	#ffd7af
+forgotten sunset	#ffd7af
+satin latour	#ffd7af
+porcini	#d7af87
+santa fe tan	#d7af87
+calico	#d7af87
+caramel cloud	#d7af87
+buttery leather	#d7af87
+clay ochre	#af875f
+roman coin	#af875f
+light oak brown	#af875f
+caramel kiss	#af875f
+sacred ground	#af875f
+vintage orange	#ffaf5f
+dreamy sunset	#ffaf5f
+burning flame	#ffaf5f
+rajah	#ffaf5f
+mango salsa	#ffaf5f
+mandarin jelly	#ff8700
+the new black	#ff8700
+american orange	#ff8700
+sun crete	#ff8700
+orange juice	#ff8700
+orange brown	#af5f00
+orangish brown	#af5f00
+umber	#af5f00
+ginger	#af5f00
+butter fudge	#af5f00
+fleur de sel caramel	#d78700
+fox tails	#d78700
+harvest eve gold	#d78700
+orange pepper	#d78700
+fulvous	#d78700
+workout routine	#ffd787
+surfboard yellow	#ffd787
+big bus yellow	#ffd787
+oberon	#ffd787
+egg cream	#ffd787
+sell gold	#d7af5f
+butterscotch bliss	#d7af5f
+equator	#d7af5f
+stranglethorn ochre	#d7af5f
+french pale gold	#d7af5f
+fresh squeezed	#ffaf00
+clementine jelly	#ffaf00
+frenzy	#ffaf00
+yellow exhilaration	#ffaf00
+imperial yellow	#ffaf00
+rat brown	#875f00
+soil of avagddu	#875f00
+alligator	#875f00
+ground earth	#875f00
+hè sè brown	#875f00
+common dandelion	#ffd75f
+lemon twist	#ffd75f
+aspen gold	#ffd75f
+naples yellow	#ffd75f
+yellow stagshorn	#ffd75f
+strong mustard	#af8700
+chestnut gold	#af8700
+mustard brown	#af8700
+bark sawdust	#af8700
+cobra leather	#af8700
+palomino gold	#d7af00
+deadly yellow	#d7af00
+chinese gold	#d7af00
+mustard	#d7af00
+burnt yellow	#d7af00
+gold	#ffd700
+school bus	#ffd700
+soviet gold	#ffd700
+cyber yellow	#ffd700
+evil-lyn	#ffd700
+poetic yellow	#ffffd7
+lit	#ffffd7
+sun city	#ffffd7
+pumpkin seed	#ffffd7
+matt white	#ffffd7
+green mesh	#d7d7af
+morning moor	#d7d7af
+kohlrabi green	#d7d7af
+mǐ bái beige	#d7d7af
+dull sage	#d7d7af
+daddy-o	#afaf87
+lively ivy	#afaf87
+wall green	#afaf87
+underhive ash	#afaf87
+new bamboo	#afaf87
+tilleul de noémie	#87875f
+green savage	#87875f
+green scene	#87875f
+spinach souffle	#87875f
+bandicoot	#87875f
+vic 20 creme	#ffffaf
+parchment	#ffffaf
+creamy sunshine pastel	#ffffaf
+ginger lemon tea	#ffffaf
+bollywood gold	#ffffaf
+wax green	#d7d787
+treasury	#d7d787
+lime ice	#d7d787
+garlic toast	#d7d787
+golden delicious	#d7d787
+palm	#afaf5f
+palm frond	#afaf5f
+green me	#afaf5f
+april green	#afaf5f
+hemp tea	#afaf5f
+cinque foil	#ffff87
+yippie yellow	#ffff87
+aged plastic casing	#ffff87
+butter	#ffff87
+yellowish tan	#ffff87
+banana chalk	#d7d75f
+chinese green	#d7d75f
+energized	#d7d75f
+species	#d7d75f
+sequesta	#d7d75f
+canary	#ffff5f
+candy corn	#ffff5f
+duckling fluff	#ffff5f
+laser lemon	#ffff5f
+unmellow yellow	#ffff5f
+mud green	#5f5f00
+earthy khaki green	#5f5f00
+green brown	#5f5f00
+ayahuasca vine	#5f5f00
+serrano pepper	#5f5f00
+heart gold	#878700
+drably olive	#878700
+verde tropa	#808000
+mongolian plateau	#808000
+swamp green	#808000
+old asparagus	#878700
+krypton green	#878700
+moscow papyrus	#878700
+honey and thyme	#afaf00
+mustard green	#afaf00
+dark citron	#afaf00
+yew	#afaf00
+sulphine yellow	#afaf00
+chartreuse shot	#d7d700
+golden gun	#d7d700
+march green	#d7d700
+mogwa-cheong yellow	#d7d700
+octarine	#d7d700
+yellow	#ffff00
+bat-signal	#ffff00
+yell for yellow	#ffff00
+lemon glacier	#ffff00
+bright yellow	#ffff00
+lime zest	#d7ff00
+citron goby	#d7ff00
+bitter lime	#d7ff00
+dancing-lady orchid	#d7ff00
+neon yellow	#d7ff00
+king lime	#afd700
+slimer green	#afd700
+immaculate iguana	#afd700
+vivid lime green	#afd700
+high grass	#afd700
+fresh lawn	#87af00
+dark lime	#87af00
+brilliant green	#87af00
+seasoned apple green	#87af00
+grasping grass	#87af00
+isotonic water	#d7ff5f
+pear spritz	#d7ff5f
+green of bhabua	#d7ff5f
+ultra moss	#d7ff5f
+tennis ball	#d7ff5f
+pesto alla genovese	#5f8700
+avocado	#5f8700
+olive green	#5f8700
+topiary green	#5f8700
+pistachio flour	#5f8700
+lime acid	#afff00
+lime candy pearl	#afff00
+lemon green	#afff00
+wolf lichen	#afff00
+spring bud	#afff00
+green shimmer	#d7ff87
+honeydew peel	#d7ff87
+mystic green	#d7ff87
+green incandescence	#afff87
+sunny lime	#d7ff87
+lime lizard	#afd75f
+juicy lime	#afd75f
+last of lettuce	#afd75f
+citrus leaf	#afd75f
+badass grass	#afd75f
+overgrown	#87d700
+electric leaf	#87d700
+alien armpit	#87d700
+sheen green	#87d700
+green cape	#87d700
+kermit green	#5faf00
+leaf green	#5faf00
+appetizing asparagus	#5faf00
+yoshi	#5faf00
+emerald glitter	#5faf00
+lasting lime	#87ff00
+bright lime	#87ff00
+radioactive	#87ff00
+radium	#87ff00
+mochito	#87ff00
+lime mist	#d7ffaf
+sour green cherry	#d7ffaf
+greedy green	#d7ffaf
+breeze of green	#d7ffaf
+distilled venom	#d7ffaf
+fresh lettuce	#afd787
+peas in a pod	#afd787
+wasabi	#afd787
+pastel lime	#afd787
+feijoa	#afd787
+broccoli	#87af5f
+chelsea cucumber	#87af5f
+jealousy	#87af5f
+celuce	#87af5f
+nasturtium leaf	#87af5f
+pale lime green	#afff5f
+irradiated green	#afff5f
+luminescent lime	#afff5f
+stinging wasabi	#afff5f
+key lime	#afff5f
+radioactive lilypad	#5fd700
+tropical funk	#5fd700
+corrosive green	#5fd700
+blinking terminal	#5fd700
+composite artefact green	#5fd700
+bright green	#5fff00
+fertility green	#5fff00
+hyper green	#5fff00
+bright lime green	#5fff00
+sparkling green	#5fff00
+pistachio mousse	#afff87
+pale light green	#afff87
+light yellowish green	#afff87
+green day	#afff87
+lilliputian lime	#87d75f
+bright lettuce	#87d75f
+vivid spring	#87d75f
+amazon parrot	#87ff5f
+fairy tale green	#87d75f
+poisonous dart	#87ff5f
+lighter green	#87ff5f
+stadium lawn	#87ff5f
+astro arcade green	#87ff5f
+transparent green	#d7ffd7
+aquarelle mint	#d7ffd7
+frosted plains	#d7ffd7
+light carolina	#d7ffd7
+mint zest	#d7ffd7
+flower stem	#afd7af
+fizz	#afd7af
+big spender	#afd7af
+coral springs	#afd7af
+pastel mint green	#afd7af
+chatty cricket	#87af87
+shaded willow	#87af87
+peapod	#87af87
+meadow	#87af87
+mermaid’s cove	#87af87
+hippie green	#5f875f
+tuscan herbs	#5f875f
+soylent green	#5f875f
+clouded pine	#5f875f
+spring garden	#5f875f
+creamy mint	#afffaf
+light seafoam green	#afffaf
+light mint green	#afffaf
+light pastel green	#afffaf
+light mint	#afffaf
+greek garden	#87d787
+de york	#87d787
+electric lettuce	#87d787
+feralas lime	#87d787
+vic 20 green	#87d787
+boring green	#5faf5f
+chlorella green	#5faf5f
+endo	#5faf5f
+exploration green	#5faf5f
+techno green	#5faf5f
+easter green	#87ff87
+cobalt green	#87ff87
+radar blip green	#87ff87
+light green	#5fff87
+ulva lactuca green	#87ff87
+lightish green	#5fd75f
+koopa green shell	#5fd75f
+scorpion green	#5fd75f
+fresh green	#5fd75f
+loud green	#5fd75f
+screamin’ green	#5fff5f
+biopunk	#5fff5f
+green katamari	#5fff5f
+puyo blob green	#5fff5f
+goblin warboss	#5fff5f
+cucumber	#005f00
+duck hunt	#005f00
+pakistan green	#005f00
+forest ride	#005f00
+emerald green	#005f00
+hulk	#008700
+lucky clover	#008700
+green hills	#008000
+fine pine	#008700
+moth green	#008000
+clover	#008700
+maniac green	#008700
+phosphor green	#00af00
+aquamentus green	#00af00
+bubble bobble green	#00af00
+green glimmer	#00af00
+waystone green	#00af00
+greenalicious	#00d700
+nuclear throne	#00d700
+tunic green	#00d700
+demeter green	#00d700
+vibrant green	#00d700
+green	#00ff00
+venom dart	#00ff00
+electric pickle	#00ff00
+spring	#00ff00
+ega green	#00ff00
+thallium flame	#5fff87
+grotesque green	#5fd787
+flora	#5fff87
+goblin green	#5fff87
+esper’s fungus green	#87ffaf
+green epiphany	#87ffaf
+foam green	#87ffaf
+mild menthol	#87ffaf
+mint bliss	#87ffaf
+spring bouquet	#5fd787
+van gogh green	#5fd787
+vegetation	#5fd787
+snow pea	#5fd787
+cathode green	#00ff5f
+booger buster	#00ff87
+mike wazowski green	#00ff5f
+spring green	#00ff87
+guppie green	#00ff87
+alienated	#00d75f
+malachite	#00d75f
+limonana	#00d75f
+benzol green	#00d787
+green priestess	#00d75f
+mintastic	#afffd7
+pale turquoise	#afffd7
+seafair green	#afffd7
+icery	#afffd7
+neo mint	#afffd7
+jovial jade	#87d7af
+tropical trail	#87d7af
+pharaoh’s jade	#87d7af
+marooned	#87d7af
+aquamarine ocean	#87d7af
+verdigris green	#5faf87
+green tourmaline	#5faf87
+jade cream	#5faf87
+sea grass	#5faf87
+crazy eyes	#5faf87
+ineffable green	#5fffaf
+hanuman green	#5fffaf
+venice green	#5fffaf
+illicit green	#5fffaf
+sea green	#5fffaf
+turquoise green	#00ff87
+ahaetulla prasina	#00ff87
+go green!	#00af5f
+greedo green	#00af5f
+rita repulsa	#00af5f
+alhambra green	#00af5f
+jungle	#00af5f
+underwater fern	#00d787
+caribbean green	#00d787
+cōng lǜ green	#00d787
+aqua green	#00d787
+tibetan plateau	#87ffd7
+roller derby	#87ffd7
+hiroshima aquamarine	#87ffd7
+a state of mint	#87ffd7
+calamine blue	#87ffd7
+medium aquamarine	#5fd7af
+sweet garden	#5fd7af
+tropical tide	#5fd7af
+aquarium blue	#5fd7af
+jamaican jade	#5fd7af
+greenish turquoise	#00ffaf
+enthusiasm	#00ffaf
+yíng guāng sè green	#00ffaf
+minty paradise	#00ffaf
+night pearl	#00ffaf
+absinthe turquoise	#00875f
+chagall green	#00875f
+spectral green	#00875f
+spanish viridian	#00875f
+bosphorus	#00875f
+rare wind	#5fffd7
+move mint	#5fffd7
+spindrift	#5fffd7
+icy life	#5fffd7
+near moon	#5fffd7
+arcadia	#00af87
+simply green	#00af87
+hobgoblin	#00af87
+chromophobia green	#00af87
+moray eel	#00af87
+channel marker green	#00d7af
+lifeless green	#00d7af
+mint leaf	#00d7af
+pristine oceanic	#00d7af
+malted mint madness	#00d7af
+ice ice baby	#00ffd7
+plunge pool	#00ffd7
+vibrant mint	#00ffd7
+frozen boubble	#00ffd7
+bright teal	#00ffd7
+refreshing primer	#d7ffff
+salt mountain	#d7ffff
+mount olympus	#d7ffff
+cold canada	#d7ffff
+ice	#d7ffff
+rivers edge	#afd7d7
+light continental waters	#afd7d7
+sugar pool	#afd7d7
+light imagine	#afd7d7
+wave top	#afd7d7
+hydrology	#87afaf
+bon voyage	#87afaf
+cold front green	#87afaf
+shallow water ground	#87afaf
+jitterbug lure	#87afaf
+steel teal	#5f8787
+arctic	#5f8787
+cretan green	#5f8787
+tasmanian sea	#5f8787
+pond sedge	#5f8787
+celeste	#afffff
+italian sky blue	#afffff
+frostbite	#afffff
+affen turquoise	#afffff
+winter meadow	#afffff
+island oasis	#87d7d7
+mountain lake blue	#87d7d7
+vibrant soft blue	#87d7d7
+rainwater	#87d7d7
+vic 20 sky	#87d7d7
+aquarelle	#5fafaf
+artesian well	#5fafaf
+fountain blue	#5fafaf
+experience	#5fafaf
+timid sea	#5fafaf
+glitter shower	#87ffff
+electric blue	#87ffff
+shallow water	#87ffff
+photon projector	#87ffff
+defense matrix	#87ffff
+hammam blue	#5fd7d7
+pluviophile	#5fd7d7
+blue radiance	#5fd7d7
+watercourse	#5fd7d7
+jazzy jade	#5fd7d7
+moonglade water	#5fffff
+cga blue	#5fffff
+electric sheep	#5fffff
+frozen turquoise	#5fffff
+aggressive baby blue	#5fffff
+sandhill crane	#005f5f
+mosque	#005f5f
+emerald stone	#005f5f
+enamelled jewel	#005f5f
+tidal pool	#005f5f
+teal	#008080
+belly flop	#008080
+pond bath	#008080
+windows 95 desktop	#008080
+macquarie	#008080
+green moblin	#008787
+green lapis	#008787
+navigate	#008787
+well blue	#008787
+milky aquamarine	#008787
+fiji	#00afaf
+jade orchid	#00afaf
+bluebird	#00afaf
+cyan sky	#00afaf
+garish blue	#00afaf
+jade glass	#00d7d7
+aztec turquoise	#00d7d7
+mint morning	#00d7d7
+tilla kari mosque	#00d7d7
+first timer green	#00d7d7
+aqua	#00ffff
+spanish sky blue	#00ffff
+fluorescent turquoise	#00ffff
+agressive aqua	#00ffff
+arctic water	#00ffff
+neon blue	#00d7ff
+tropical turquoise	#00d7ff
+vivid sky blue	#00d7ff
+bright sky blue	#00d7ff
+whimsical blue	#00d7ff
+malibu blue	#00afd7
+blue fire	#00afd7
+blue atoll	#00afd7
+maldives	#00afd7
+vanadyl blue	#00afd7
+stomy shower	#0087af
+lyrebird	#0087af
+corfu waters	#0087af
+tiny bubbles	#0087af
+tusche blue	#0087af
+athena blue	#5fd7ff
+ionized-air glow	#5fd7ff
+skyan	#5fd7ff
+electric lemonade	#5fd7ff
+heisenberg blue	#5fd7ff
+blue flame	#005f87
+impulse	#005f87
+ink blotch	#005f87
+blue league	#005f87
+blue heist	#005f87
+krishna blue	#00afff
+protoss pylon	#00afff
+blue bolt	#00afff
+hawaii morning	#00afff
+democrat	#00afff
+tranquil pool	#87d7ff
+kul sharif blue	#87d7ff
+drift on the sea	#87d7ff
+platonic blue	#87d7ff
+clear sky	#87d7ff
+flyway	#5fafd7
+disembark	#5fafd7
+shimmering brook	#5fafd7
+riviera blue	#5fafd7
+crystal seas	#5fafd7
+blue cola	#0087d7
+calgar blue	#0087d7
+electron blue	#0087d7
+kahu blue	#0087d7
+lvivian rain	#0087d7
+cobalt stone	#005faf
+wing commander	#005faf
+directoire blue	#005faf
+peptalk	#005faf
+bottled sea	#005faf
+too blue to be true	#0087ff
+bubble bobble p2	#0087ff
+brescian blue	#0087ff
+azure	#0087ff
+starfleet blue	#0087ff
+ice cold stare	#afd7ff
+droplet	#afd7ff
+malmö ff	#afd7ff
+endless horizon	#afd7ff
+night snow	#afd7ff
+blue bell	#87afd7
+birdie num num	#87afd7
+buoyant blue	#87afd7
+boy blue	#87afd7
+reform	#87afd7
+pacific coast	#5f87af
+shrinking violet	#5f87af
+lichen blue	#5f87af
+perfect periwinkle	#5f87af
+sand shark	#5f87af
+tiān lán sky	#5fafff
+âbi blue	#5fafff
+joust blue	#5fafff
+hello summer	#5fafff
+blue jeans	#5fafff
+blue ruin	#005fd7
+frosted blueberries	#005fd7
+royal navy blue	#005fd7
+dead blue eyes	#005fd7
+pacific bridge	#005fd7
+bright blue	#005fff
+blue ribbon	#005fff
+megaman helmet	#005fff
+nīlā blue	#005fff
+blue et une nuit	#005fff
+kitten’s eye	#87afff
+carolina blue	#87afff
+parakeet blue	#87afff
+scenic water	#87afff
+fly away	#87afff
+blue jay	#5f87d7
+livid	#5f87d7
+berlin blue	#5f87d7
+little boy blue	#5f87d7
+marina	#5f87d7
+deep denim	#5f87ff
+punch out glove	#5f87ff
+skinny jeans	#5f87ff
+flickery c64	#5f87ff
+c64 ntsc	#5f87ff
+transparent blue	#d7d7ff
+pale lavender	#d7d7ff
+icy plains	#d7d7ff
+nostalgia perfume	#d7d7ff
+contrail	#d7d7ff
+pixie violet	#afafd7
+freesia purple	#afafd7
+lavender wash	#afafd7
+delicate lilac	#afafd7
+high style	#afafd7
+aster purple	#8787af
+non skid grey	#8787af
+persian violet	#8787af
+papilio argeotus	#8787af
+skysail blue	#8787af
+purple balloon	#5f5f87
+pharaoh purple	#5f5f87
+majestic purple	#5f5f87
+idol	#5f5f87
+champion blue	#5f5f87
+winterspring lilac	#afafff
+shy moment	#afafff
+greyish lavender	#afafff
+purple illusion	#afafff
+dried lilac	#afafff
+tanzine	#8787d7
+bailey bells	#8787d7
+mystic iris	#8787d7
+adora	#8787d7
+mood mode	#8787d7
+bellflower	#5f5faf
+yuè guāng lán moonlight	#5f5faf
+blue iris	#5f5faf
+evening lagoon	#5f5faf
+blue marguerite	#5f5faf
+lavender blue shadow	#8787ff
+periwinkle	#8787ff
+blue party parrot	#8787ff
+orchid	#8787ff
+periwinkle blue	#8787ff
+exodus fruit	#5f5fd7
+dark periwinkle	#5f5fd7
+thick blue	#5f5fd7
+ameixa	#5f5fd7
+majorelle blue	#5f5fd7
+blue genie	#5f5fff
+blue heath butterfly	#5f5fff
+shady neon blue	#5f5fff
+blue hepatica	#5f5fff
+flickering sea	#5f5fff
+abyssal blue	#00005f
+alone in the dark	#00005f
+d. darx blue	#00005f
+alucard’s night	#00005f
+prussian nights	#00005f
+navy blue	#000087
+midnight in tokyo	#000087
+scotch blue	#000087
+yves klein blue	#000087
+deep blue	#000080
+phthalo blue	#000087
+bohemian blue	#0000af
+traditional royal blue	#0000af
+antarctic circle	#0000af
+keese blue	#0000af
+cobalt	#0000af
+bluealicious	#0000d7
+medium blue	#0000d7
+lady of the sea	#0000d7
+pure blue	#0000d7
+nightfall in suburbia	#0000d7
+blue	#0000ff
+graphical 80’s sky	#0000ff
+star of david	#0000ff
+primary blue	#0000ff
+strong blue	#0000ff
+purple anemone	#875fff
+purple honeycreeper	#875fff
+blackthorn berry	#875fff
+venetian nights	#875fff
+irrigo purple	#875fff
+lilac geode	#af87ff
+purple illusionist	#af87ff
+liliac	#af87ff
+illicit purple	#af87ff
+queer purple	#af5fff
+gloomy purple	#875fd7
+matt purple	#875fd7
+iridescent purple	#875fd7
+amethyst	#875fd7
+legendary lavender	#875fd7
+electric indigo	#5f00ff
+aladdin’s feather	#5f00ff
+bright indigo	#5f00ff
+wèi lán azure	#5f00ff
+tezcatlipōca blue	#5f00ff
+trusted purple	#5f00d7
+gonzo violet	#5f00d7
+space opera	#5f00d7
+violet blue	#5f00d7
+sea serpent’s tears	#5f00d7
+light violet	#d7afff
+testosterose	#d7afff
+mauve	#d7afff
+teasel dipsacus	#d7afff
+pink illusion	#d7afff
+middy’s purple	#af87d7
+lavender blossom	#af87d7
+pale purple	#af87d7
+lenurple	#af87d7
+fleur-de-lis	#af87d7
+lusty lavender	#875faf
+chive blossom	#875faf
+genestealer purple	#875faf
+lavish spending	#875faf
+knight elf	#875faf
+purple hedonist	#af5fff
+vega violet	#af5fff
+lighter purple	#af5fff
+light shōtoku purple	#af5fff
+purple climax	#8700ff
+amethyst ganzstar	#8700ff
+violent violet	#8700ff
+poison purple	#8700ff
+star platinum purple	#8700ff
+aubergine perl	#5f00af
+elegant midnight	#5f00af
+indiviolet sunset	#5f00af
+purplue	#5f00af
+indigo purple	#5f00af
+french violet	#8700af
+vibrant violet	#8700d7
+violet ink	#8700d7
+violet poison	#8700af
+voluptuous violet	#8700d7
+lavender tea	#d787ff
+crash pink	#d787ff
+grass pink orchid	#d787ff
+pink fetish	#d787ff
+bright lilac	#d787ff
+teldrassil purple	#af5fd7
+rich lilac	#af5fd7
+medium orchid	#af5fd7
+rich lavender	#af5fd7
+ripe lavander	#af5fd7
+poison purple paradise	#af00ff
+digital violets	#af00ff
+bright violet	#af00ff
+the grape war of 97’	#af00ff
+spectacular purple	#af00ff
+peaceful purple	#5f0087
+sql injection purple	#5f0087
+zeus purple	#5f0087
+extraviolet	#5f0087
+pigment indigo	#5f0087
+flaming flamingo	#d75fff
+after-party pink	#d75fff
+pink fever	#d75fff
+jacaranda pink	#d75fff
+heliotrope	#d75fff
+shade of violet	#8700af
+shiffurple	#8700af
+purple feather boa	#8700af
+vibrant purple	#af00d7
+ferocious fuchsia	#af00d7
+capricious purple	#af00d7
+vivid mulberry	#af00d7
+foxy fuchsia	#af00d7
+psychedelic purple	#d700ff
+phlox	#d700ff
+electric orchid	#d700ff
+vivid orchid	#d700ff
+hot purple	#d700ff
+sugarpills	#ffd7ff
+pink diamond	#ffd7ff
+strawberry frost	#ffd7ff
+sugar chic	#ffd7ff
+silky pink	#ffd7ff
+whisper of plum	#d7afd7
+bff	#d7afd7
+confectionary	#d7afd7
+lilac haze	#d7afd7
+sea lavender	#d7afd7
+dusty lavender	#af87af
+stage mauve	#af87af
+voila!	#af87af
+african violet	#af87af
+fashionably plum	#af87af
+candy violet	#875f87
+dusty purple	#875f87
+ancient murasaki purple	#875f87
+crushed grape	#875f87
+orchid orchestra	#875f87
+jigglypuff	#ffafff
+strawberry buttercream	#ffafff
+distilled rose	#ffafff
+sweet slumber pink	#ffafff
+pink apotheosis	#ffafff
+lavender pink	#d787d7
+blush essence	#d787d7
+purception	#d787d7
+lavender perceptions	#d787d7
+hibiscus pop	#d787d7
+royalty loyalty	#af5faf
+orchid dottyback	#af5faf
+mazzy star	#af5faf
+iris orchid	#af5faf
+pearly purple	#af5faf
+darling bud	#ff87ff
+bubble gum	#ff87ff
+hottest of pinks	#ff87ff
+technolust	#ff87ff
+atomic pink	#ff87ff
+free speech magenta	#d75fd7
+blueberry glaze	#d75fd7
+thick pink	#d75fd7
+fuchsia flash	#d75fd7
+death of a star	#d75fd7
+violet pink	#ff5fff
+pink flamingo	#ff5fff
+magenta stream	#ff5fff
+ultimate pink	#ff5fff
+surati pink	#ff5fff
+clear plum	#5f005f
+purple dreamer	#5f005f
+divine purple	#5f005f
+amygdala purple	#5f005f
+god of nights	#5f005f
+purple	#870087
+philippine violet	#870087
+aunt violet	#870087
+mardi gras	#870087
+ultraberry	#800080
+dark magenta	#870087
+energic eggplant	#af00af
+purple potion	#af00af
+purple pirate	#d700af
+heliotrope magenta	#af00af
+kinky koala	#af00af
+fúchsia intenso	#d700af
+fungal hallucinations	#d700d7
+passionate pink	#d700af
+awkward purple	#d700d7
+screaming magenta	#d700d7
+magenta	#ff00ff
+sixteen million pink	#ff00ff
+rainbow’s inner rim	#ff00ff
+brusque pink	#ff00ff
+fresh neon pink	#ff00ff
+fuchsia flame	#ff00d7
+hot magenta	#ff00d7
+mademoiselle pink	#ff00d7
+vice city	#ff00d7
+bright magenta	#ff00d7
+aphroditean fuchsia	#d700af
+explosive purple	#d700af
+vibrant velvet	#af0087
+katy berry	#af0087
+blissful berry	#af0087
+eye popping cherry	#af0087
+king’s plum pie	#af0087
+illicit pink	#ff5fd7
+rose pink	#ff5fd7
+drunken flamingo	#ff5fd7
+purple pizzazz	#ff5fd7
+candy pink	#ff5fd7
+grapest	#87005f
+cardinal pink	#87005f
+xereus purple	#87005f
+strong cerise	#87005f
+patriarch	#87005f
+mean girls lipstick	#ff00af
+bright pink	#ff00af
+ms. pac-man kiss	#ff00af
+brutal pink	#ff00af
+shocking pink	#ff00af
+pink delight	#ff87d7
+princess perfume	#ff87d7
+pout pink	#ff87d7
+shimmering love	#ff87d7
+angel face rose	#ff87d7
+mega magenta	#d75faf
+pú táo zǐ purple	#d75faf
+purple hollyhock	#d75faf
+orion	#d75faf
+pink charge	#d75faf
+the art of seduction	#d70087
+snappy violet	#d70087
+mexican pink	#d70087
+vampire love story	#d70087
+benevolent pink	#d70087
+velvet cupcake	#af005f
+shy guy red	#af005f
+aztec warrior	#af005f
+violet red	#af005f
+banafsaji purple	#af005f
+fancy fuchsia	#ff0087
+hot pink	#ff0087
+neon rose	#ff0087
+flickr pink	#ff0087
+strong pink	#ff0087
+lavender candy	#ffafd7
+spaghetti strap pink	#ffafd7
+pink cattleya	#ffafd7
+fresh gum	#ffafd7
+hot aquarelle pink	#ffafd7
+springtime bloom	#d787af
+high maintenance	#d787af
+middle purple	#d787af
+vivacious pink	#d787af
+moonlit mauve	#d787af
+dahlia mauve	#af5f87
+wild mulberry	#af5f87
+guppy violet	#af5f87
+meadow mauve	#af5f87
+cure all	#af5f87
+yíng guāng sè pink	#ff5faf
+girls night out	#ff5faf
+pink katydid	#ff5faf
+pink as hell	#ff5faf
+hot pink fusion	#ff5faf
+tête-à-tête	#d7005f
+magna cum laude	#d7005f
+rubine red	#d7005f
+anger	#d7005f
+rowan	#d7005f
+flaming hot flamingoes	#ff005f
+sizzling watermelon	#ff005f
+new york sunset	#ff005f
+standby led	#ff005f
+sorx red	#ff005f
+informative pink	#ff87af
+tickle me pink	#ff87af
+strawberry dreams	#ff87af
+pinky	#ff87af
+rock’n’rose	#ff87af
+surfer girl	#d75f87
+blush d’amour	#d75f87
+flirty rose	#d75f87
+preppy rose	#d75f87
+groovy	#d75f87
+stellar strawberry	#ff5f87
+brink pink	#ff5f87
+warm pink	#ff5f87
+ultra red	#ff5f87
+rosy pink	#ff5f87
