@@ -17,16 +17,17 @@ end
 
 ## Notes
 
-In addition to the 16 standard ANSI colors<sup>[1](#footnote1)</sup> and
-their background counterparts, this package also supports the 256 Xterm colors
-(foreground and background).
+In addition to the 16 standard ANSI colors[^1] and their background
+counterparts, this package also supports the 256 Xterm colors (foreground and
+background).
 
 <ins>All</ins> of these 256 colors were given names like:
 - ![!](/images/00ffff.png) `:aqua`
 - ![!](/images/87ff00.png) `:chartreuse`
 - ![!](/images/d700ff.png) `:psychedelic_purple`
 
-For the full list of color names, see the **Color Samples** section below.
+For the full list of color names, see the **Color Samples** section below. Most
+of these color names are based on the post [Naming the 256 XTerm colors][Xterm].
 
 You can also use color number atoms instead of specific names:
 
@@ -39,7 +40,7 @@ alias IO.ANSI.Plus, as: ANSI
 Most colors have <ins>multiple</ins> names, for example, `:moccasin` and `:navajo_white`
 for color code 223.
 
-<sup><a name="footnote1">1</a></sup> Actually 8 colors and their "bright" variants.
+[^1]: Actually 8 colors and their "bright" variants.
 
 ## Shortcuts
 
@@ -74,3 +75,4 @@ You can click on any of the 3 images below for a clearer view.
 ## ![color_samples](/images/color_samples.png)
 
 [IO.ANSI]: https://hexdocs.pm/elixir/IO.ANSI.html
+[Xterm]: https://www.wowsignal.io/articles/xterm256
