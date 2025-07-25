@@ -6,6 +6,7 @@ defmodule IO.ANSI.Plus.IETest do
   alias IO.ANSI.Plus, as: ANSI
 
   @colors get_env(:colors)
+  @standard_colors get_env(:standard_colors)
 
   test "rgb's properly converted to hsl's" do
     message = fn code, hsl, to_hsl ->
@@ -26,6 +27,12 @@ defmodule IO.ANSI.Plus.IETest do
     assert(
       for %{code: code, rgb: rgb, hsl: hsl} <- @colors, uniq: true do
         IE.rgb_to_hsl(rgb) |> compare.(hsl, code)
+      end == [nil]
+    )
+
+    assert(
+      for %{index: index, rgb: rgb, hsl: hsl} <- @standard_colors, uniq: true do
+        IE.rgb_to_hsl(rgb) |> compare.(hsl, index)
       end == [nil]
     )
   end
@@ -59,5 +66,15 @@ defmodule IO.ANSI.Plus.IETest do
       assert is_atom(name)
       assert code in 0..255
     end
+  end
+
+  test "color sample names are valid" do
+    total_number_of_names =
+      for {_code, names} <- IE.color_sample_names() do
+        length(names)
+      end
+      |> Enum.sum()
+
+    assert total_number_of_names == 1378
   end
 end
