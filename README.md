@@ -38,8 +38,8 @@ alias IO.ANSI.Plus, as: ANSI
 ["Hi, ", :color163_background, "world!"] |> ANSI.format(true) |> IO.puts()
 ```
 
-Most colors have <ins>multiple</ins> names, for example, `:moccasin` and `:navajo_white`
-for color code 223.
+Most colors have <ins>multiple</ins> names, for example, `:moccasin` and
+`:navajo_white` for color code 223.
 
 [^1]: Actually 8 colors and their "bright" variants.
 

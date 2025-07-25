@@ -40,7 +40,7 @@ defmodule IO.ANSI.Plus do
 
   use PersistConfig
 
-  @color_codes get_env(:color_codes)
+  @color_names get_env(:color_names)
 
   @type ansicode :: atom
   @type ansilist ::
@@ -229,7 +229,7 @@ defmodule IO.ANSI.Plus do
     defsequence.(:"color#{code}_background", "48;5;#{code}", "m")
   end
 
-  for {color, code} <- @color_codes do
+  for {color, code} <- @color_names do
     # def chartreuse(), do: "\e[38;5;118m"
     # defp format_sequence(:chartreuse), do: chartreuse()
     defsequence.(color, "38;5;#{code}", "m")

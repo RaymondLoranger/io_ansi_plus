@@ -1552,144 +1552,143 @@ standard_colors = [
   %{
     index: 1,
     name: :red,
-    hex: "ff0000",
-    rgb: {255, 0, 0},
-    hsl: {0.0, 1.0, 0.5},
+    hex: "800000",
+    rgb: {128, 0, 0},
+    hsl: {0.0, 1.0, 0.25098039215686274},
     foreground: "\e[31m",
     background: "\e[41m"
   },
   %{
     index: 2,
     name: :green,
-    hex: "00ff00",
-    rgb: {0, 255, 0},
-    hsl: {120.0, 1.0, 0.5},
+    hex: "008000",
+    rgb: {0, 128, 0},
+    hsl: {120.0, 1.0, 0.25098039215686274},
     foreground: "\e[32m",
     background: "\e[42m"
   },
   %{
     index: 3,
     name: :yellow,
-    hex: "ffff00",
-    rgb: {255, 255, 0},
-    hsl: {60.0, 1.0, 0.5},
+    hex: "808000",
+    rgb: {128, 128, 0},
+    hsl: {60.0, 1.0, 0.25098039215686274},
     foreground: "\e[33m",
     background: "\e[43m"
   },
   %{
     index: 4,
     name: :blue,
-    hex: "0000ff",
-    rgb: {0, 0, 255},
-    hsl: {240.0, 1.0, 0.5},
+    hex: "000080",
+    rgb: {0, 0, 128},
+    hsl: {240.0, 1.0, 0.25098039215686274},
     foreground: "\e[34m",
     background: "\e[44m"
   },
   %{
     index: 5,
     name: :magenta,
-    hex: "ff00ff",
-    rgb: {255, 0, 255},
-    hsl: {300.0, 1.0, 0.5},
+    hex: "800080",
+    rgb: {128, 0, 128},
+    hsl: {300.0, 1.0, 0.25098039215686274},
     foreground: "\e[35m",
     background: "\e[45m"
   },
   %{
     index: 6,
     name: :cyan,
-    hex: "00ffff",
-    rgb: {0, 255, 255},
-    hsl: {180.0, 1.0, 0.5},
+    hex: "008080",
+    rgb: {0, 128, 128},
+    hsl: {180.0, 1.0, 0.25098039215686274},
     foreground: "\e[36m",
     background: "\e[46m"
   },
   %{
     index: 7,
     name: :white,
-    hex: "ffffff",
-    rgb: {255, 255, 255},
-    hsl: {0.0, 0.0, 1.0},
+    hex: "c0c0c0",
+    rgb: {192, 192, 192},
+    hsl: {0.0, 0.0, 0.7529411764705882},
     foreground: "\e[37m",
     background: "\e[47m"
   },
-  # Bright variants...
   %{
     index: 8,
     name: :light_black,
-    hex: "222024",
-    rgb: {34, 32, 36},
-    hsl: {270.0, 0.058823529411764705, 0.13333333333333333},
+    hex: "808080",
+    rgb: {128, 128, 128},
+    hsl: {0.0, 0.0, 0.5019607843137255},
     foreground: "\e[90m",
     background: "\e[100m"
   },
   %{
     index: 9,
     name: :light_red,
-    hex: "ff000d",
-    rgb: {255, 0, 13},
-    hsl: {356.94117647058823, 1.0, 0.5},
+    hex: "ff0000",
+    rgb: {255, 0, 0},
+    hsl: {0.0, 1.0, 0.5},
     foreground: "\e[91m",
     background: "\e[101m"
   },
   %{
     index: 10,
     name: :light_green,
-    hex: "aaff00",
-    rgb: {170, 255, 0},
-    hsl: {80.0, 1.0, 0.5},
+    hex: "00ff00",
+    rgb: {0, 255, 0},
+    hsl: {120.0, 1.0, 0.5},
     foreground: "\e[92m",
     background: "\e[102m"
   },
   %{
     index: 11,
     name: :light_yellow,
-    hex: "ffea00",
-    rgb: {255, 234, 0},
-    hsl: {55.05882352941176, 1.0, 0.5},
+    hex: "ffff00",
+    rgb: {255, 255, 0},
+    hsl: {60.0, 1.0, 0.5},
     foreground: "\e[93m",
     background: "\e[103m"
   },
   %{
     index: 12,
     name: :light_blue,
-    hex: "0096ff",
-    rgb: {0, 150, 255},
-    hsl: {204.70588235294116, 1.0, 0.5},
+    hex: "0000ff",
+    rgb: {0, 0, 255},
+    hsl: {240.0, 1.0, 0.5},
     foreground: "\e[94m",
     background: "\e[104m"
   },
   %{
     index: 13,
     name: :light_magenta,
-    hex: "ff08e8",
-    rgb: {255, 8, 232},
-    hsl: {305.58704453441294, 1.0, 0.5156862745098039},
+    hex: "ff00ff",
+    rgb: {255, 0, 255},
+    hsl: {300.0, 1.0, 0.5},
     foreground: "\e[95m",
     background: "\e[105m"
   },
   %{
     index: 14,
     name: :light_cyan,
-    hex: "0affff",
-    rgb: {255, 255, 10},
-    hsl: {60.0, 1.0, 0.5196078431372549},
+    hex: "00ffff",
+    rgb: {0, 255, 255},
+    hsl: {180.0, 1.0, 0.5},
     foreground: "\e[96m",
     background: "\e[106m"
   },
   %{
     index: 15,
     name: :light_white,
-    hex: "fdfeff",
-    rgb: {253, 254, 255},
-    hsl: {210.0, 1.0, 0.996078431372549},
+    hex: "ffffff",
+    rgb: {255, 255, 255},
+    hsl: {0.0, 0.0, 1.0},
     foreground: "\e[97m",
     background: "\e[107m"
   }
 ]
 
 standard_color_names =
-  for %{index: index, name: name} <- standard_colors, into: %{} do
-    {index, name}
+  for %{index: index, name: name} <- standard_colors do
+    {name, index}
   end
 
 # Reference https://www.wowsignal.io/articles/xterm256
@@ -2090,7 +2089,7 @@ colors = [
     code: 26,
     hex: "005fd7",
     rgb: {0, 95, 215},
-    hsl: {213.4883720930233, 1.0, 0.4215686274509804},
+    hsl: {213.48837209302326, 1.0, 0.4215686274509804},
     foreground: "\e[38;5;26m",
     background: "\e[48;5;26m",
     legacy_names: [:science_blue],
@@ -2106,7 +2105,7 @@ colors = [
     code: 27,
     hex: "005fff",
     rgb: {0, 95, 255},
-    hsl: {217.6470588235294, 1.0, 0.5},
+    hsl: {217.64705882352942, 1.0, 0.5},
     foreground: "\e[38;5;27m",
     background: "\e[48;5;27m",
     fave_name: :bright_blue,
@@ -2166,7 +2165,7 @@ colors = [
     code: 31,
     hex: "0087af",
     rgb: {0, 135, 175},
-    hsl: {193.7142857142857, 1.0, 0.3431372549019608},
+    hsl: {193.71428571428572, 1.0, 0.3431372549019608},
     foreground: "\e[38;5;31m",
     background: "\e[48;5;31m",
     legacy_names: [:cerulean],
@@ -2182,7 +2181,7 @@ colors = [
     code: 32,
     hex: "0087d7",
     rgb: {0, 135, 215},
-    hsl: {202.32558139534885, 1.0, 0.4215686274509804},
+    hsl: {202.32558139534882, 1.0, 0.4215686274509804},
     foreground: "\e[38;5;32m",
     background: "\e[48;5;32m",
     legacy_names: [:pacific_blue],
@@ -2270,7 +2269,7 @@ colors = [
     code: 39,
     hex: "00afff",
     rgb: {0, 175, 255},
-    hsl: {198.82352941176467, 1.0, 0.5},
+    hsl: {198.8235294117647, 1.0, 0.5},
     foreground: "\e[38;5;39m",
     background: "\e[48;5;39m",
     legacy_names: [:deep_sky_blue],
@@ -2712,7 +2711,7 @@ colors = [
     code: 68,
     hex: "5f87d7",
     rgb: {95, 135, 215},
-    hsl: {219.99999999999997, 0.6000000000000001, 0.607843137254902},
+    hsl: {220.0, 0.6000000000000001, 0.607843137254902},
     foreground: "\e[38;5;68m",
     background: "\e[48;5;68m",
     legacy_names: [:picton_blue],
@@ -3351,7 +3350,7 @@ colors = [
     code: 111,
     hex: "87afff",
     rgb: {135, 175, 255},
-    hsl: {219.99999999999997, 1.0, 0.7647058823529411},
+    hsl: {220.0, 1.0, 0.7647058823529411},
     foreground: "\e[38;5;111m",
     background: "\e[48;5;111m",
     legacy_names: [],
@@ -3734,7 +3733,7 @@ colors = [
     code: 136,
     hex: "af8700",
     rgb: {175, 135, 0},
-    hsl: {46.28571428571429, 1.0, 0.3431372549019608},
+    hsl: {46.285714285714285, 1.0, 0.3431372549019608},
     foreground: "\e[38;5;136m",
     background: "\e[48;5;136m",
     legacy_names: [:dark_goldenrod],
@@ -3918,7 +3917,7 @@ colors = [
     code: 149,
     hex: "afd75f",
     rgb: {175, 215, 95},
-    hsl: {80.0, 0.6000000000000001, 0.607843137254902},
+    hsl: {80.00000000000001, 0.6000000000000001, 0.607843137254902},
     foreground: "\e[38;5;149m",
     background: "\e[48;5;149m",
     legacy_names: [:conifer],
@@ -4186,7 +4185,7 @@ colors = [
     code: 168,
     hex: "d75f87",
     rgb: {215, 95, 135},
-    hsl: {340.00000000000006, 0.6000000000000001, 0.607843137254902},
+    hsl: {340.0, 0.6000000000000001, 0.607843137254902},
     foreground: "\e[38;5;168m",
     background: "\e[48;5;168m",
     legacy_names: [:pale_violet_red],
@@ -4340,7 +4339,7 @@ colors = [
     code: 178,
     hex: "d7af00",
     rgb: {215, 175, 0},
-    hsl: {48.837209302325576, 1.0, 0.4215686274509804},
+    hsl: {48.83720930232558, 1.0, 0.4215686274509804},
     foreground: "\e[38;5;178m",
     background: "\e[48;5;178m",
     legacy_names: [:goldenrod, :golden_poppy, :corn],
@@ -4535,7 +4534,7 @@ colors = [
     code: 192,
     hex: "d7ff87",
     rgb: {215, 255, 135},
-    hsl: {80.0, 1.0, 0.7647058823529411},
+    hsl: {80.00000000000001, 1.0, 0.7647058823529411},
     foreground: "\e[38;5;192m",
     background: "\e[48;5;192m",
     legacy_names: [],
@@ -4818,7 +4817,7 @@ colors = [
     code: 211,
     hex: "ff87af",
     rgb: {255, 135, 175},
-    hsl: {340.00000000000006, 1.0, 0.7647058823529411},
+    hsl: {340.0, 1.0, 0.7647058823529411},
     foreground: "\e[38;5;211m",
     background: "\e[48;5;211m",
     legacy_names: [],
@@ -4866,7 +4865,7 @@ colors = [
     code: 214,
     hex: "ffaf00",
     rgb: {255, 175, 0},
-    hsl: {41.17647058823529, 1.0, 0.5},
+    hsl: {41.1764705882353, 1.0, 0.5},
     foreground: "\e[38;5;214m",
     background: "\e[48;5;214m",
     legacy_names: [:orange],
@@ -5494,41 +5493,28 @@ colors = [
   }
 ]
 
-fave_codes =
-  for %{code: code, names: [fave_name | _]} = color <- colors, into: %{} do
+fave_names =
+  for %{code: code, names: [fave_name | _]} = color <- colors do
     {color[:fave_name] || fave_name, code}
   end
 
-size = map_size(fave_codes)
-if size != 256, do: raise("Fave codes size not 256 but #{size}")
-
-for {name, code} <- fave_codes do
-  if !is_atom(name), do: raise("Fave name #{name} not an atom")
-  if code not in 0..255, do: raise("Fave code #{code} not in 0..255")
-end
-
-fave_names =
-  Enum.map(fave_codes, fn {name, code} -> {code, name} end) |> Map.new()
-
-color_codes =
+color_names =
   for %{code: code, legacy_names: legacy_names, names: names} <- colors,
-      name <- legacy_names ++ Enum.filter(names, &is_atom/1),
-      into: %{} do
+      name <- legacy_names ++ Enum.filter(names, &is_atom/1) do
     {name, code}
   end
 
-size = map_size(color_codes)
-if size != 1378, do: raise("Color codes size not 1378 but #{size}")
-
-for {name, code} <- color_codes do
-  if !is_atom(name), do: raise("Color name #{name} not an atom")
-  if code not in 0..255, do: raise("Color code #{code} not in 0..255")
-end
+color_sample_names =
+  for %{code: code, legacy_names: legacy_names, names: names} = color <-
+        colors do
+    [fave_name | _] = names = Enum.filter(names, &is_atom/1) ++ legacy_names
+    {code, Enum.uniq([color[:fave_name] || fave_name | names])}
+  end
 
 config :io_ansi_plus, colors: colors
-config :io_ansi_plus, fave_codes: fave_codes
 config :io_ansi_plus, fave_names: fave_names
-config :io_ansi_plus, color_codes: color_codes
+config :io_ansi_plus, color_names: color_names
 config :io_ansi_plus, legacy_colors: legacy_colors
 config :io_ansi_plus, standard_colors: standard_colors
+config :io_ansi_plus, color_sample_names: color_sample_names
 config :io_ansi_plus, standard_color_names: standard_color_names

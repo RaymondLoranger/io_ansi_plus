@@ -6,11 +6,11 @@ defmodule IO.ANSI.Plus.IE do
   alias IO.ANSI.Plus, as: ANSI
 
   @colors get_env(:colors)
-  @fave_codes get_env(:fave_codes)
   @fave_names get_env(:fave_names)
-  @color_codes get_env(:color_codes)
+  @color_names get_env(:color_names)
   @legacy_colors get_env(:legacy_colors)
   @standard_colors get_env(:standard_colors)
+  @color_sample_names get_env(:color_sample_names)
   @standard_color_names get_env(:standard_color_names)
   @black_foreground_codes [7, 10, 11, 14, 15] ++
                             Enum.to_list(34..51) ++
@@ -20,6 +20,16 @@ defmodule IO.ANSI.Plus.IE do
                             Enum.to_list(178..195) ++
                             Enum.to_list(214..231) ++
                             Enum.to_list(244..255)
+
+  @typedoc "A tuple of color name and color code/index"
+  @type color_name :: {atom, non_neg_integer}
+  @typedoc "A list of color names"
+  @type color_names :: [color_name]
+
+  @typedoc "A tuple specifying which color names/codes to print and how"
+  @type print_specs ::
+          {code_range :: Range.t(), tiles_per_row :: pos_integer,
+           column_width :: pos_integer, with_code? :: boolean}
 
   defmacro __using__(_options) do
     quote do
@@ -33,14 +43,11 @@ defmodule IO.ANSI.Plus.IE do
   @spec colors :: [map]
   def colors, do: @colors
 
-  @spec fave_codes :: %{atom => non_neg_integer}
-  def fave_codes, do: @fave_codes
-
-  @spec fave_names :: %{non_neg_integer => atom}
+  @spec fave_names :: color_names
   def fave_names, do: @fave_names
 
-  @spec color_codes :: %{atom => non_neg_integer}
-  def color_codes, do: @color_codes
+  @spec color_names :: color_names
+  def color_names, do: @color_names
 
   @spec legacy_colors :: [map]
   def legacy_colors, do: @legacy_colors
@@ -48,50 +55,35 @@ defmodule IO.ANSI.Plus.IE do
   @spec standard_colors :: [map]
   def standard_colors, do: @standard_colors
 
-  @spec standard_color_names :: %{non_neg_integer => atom}
+  @spec color_sample_names :: [{non_neg_integer, [atom]}]
+  def color_sample_names, do: @color_sample_names
+
+  @spec standard_color_names :: color_names
   def standard_color_names, do: @standard_color_names
 
   @spec black_foreground_codes :: [non_neg_integer]
   def black_foreground_codes, do: @black_foreground_codes
 
-  @spec color_samples(pos_integer) :: [[binary | atom]]
-  def color_samples(line_length) do
-    for %{
-          code: code,
-          background: background,
-          legacy_names: legacy_names,
-          names: names
-        } = color <- colors() do
-      names = Enum.filter(names, &is_atom/1)
-
-      names =
-        if color[:fave_name] do
-          Enum.uniq([color.fave_name | names ++ legacy_names])
-        else
-          names ++ legacy_names
-        end
-
-      padded_code = String.pad_leading("(#{code})", 5)
-      joined_names = Enum.map_join(names, " ", &inspect/1)
-
-      [
-        background,
-        foreground(code),
-        String.pad_trailing("#{padded_code} #{joined_names}", line_length)
-      ]
-    end
-  end
-
   @spec print_color_samples(pos_integer) :: :ok
   def print_color_samples(line_length \\ 18 * 6) do
     IO.puts("")
-    color_samples(line_length) |> Enum.each(&ANSI.puts/1)
+
+    for {code, names} <- @color_sample_names do
+      padded_code = String.pad_leading("(#{code})", 5)
+      joined_names = Enum.map_join(names, " ", &inspect/1)
+
+      ANSI.puts([
+        ANSI.color_background(code),
+        foreground(code),
+        String.pad_trailing("#{padded_code} #{joined_names}", line_length)
+      ])
+    end
+
     IO.puts("")
   end
 
-  @spec rgb_to_hsl({non_neg_integer, non_neg_integer, non_neg_integer}) ::
-          {float, float, float}
-  def rgb_to_hsl({r, g, b}) do
+  @spec rgb_to_hsl({0..255, 0..255, 0..255}) :: {float, float, float}
+  def rgb_to_hsl({r, g, b}) when r in 0..255 and g in 0..255 and b in 0..255 do
     colors = [r, g, b] = [r / 255, g / 255, b / 255]
     {max_color, min_color} = {Enum.max(colors), Enum.min(colors)}
     l = (max_color + min_color) / 2
@@ -118,8 +110,8 @@ defmodule IO.ANSI.Plus.IE do
     end
   end
 
-  @spec name_count_codes :: [{pos_integer, non_neg_integer}]
-  def name_count_codes do
+  @spec name_counts :: [{pos_integer, non_neg_integer}]
+  def name_counts do
     for %{code: code, legacy_names: legacy_names, names: names} <- @colors do
       names = Enum.filter(names, &is_atom/1)
       {length(legacy_names ++ names), code}
@@ -139,58 +131,40 @@ defmodule IO.ANSI.Plus.IE do
     |> Enum.filter(fn {_name, codes} -> length(codes) > 1 end)
   end
 
-  @spec standard_color_rows(Range.t(), pos_integer) ::
-          [[{atom, non_neg_integer}]]
-  def standard_color_rows(%Range{} = range, tiles_per_row) do
-    Enum.map(range, &{@standard_color_names[&1], &1})
-    |> Enum.chunk_every(tiles_per_row)
+  @spec color_rows(color_names, Range.t(), pos_integer) :: [color_names]
+  def color_rows(names, range, tiles_per_row) do
+    Enum.slice(names, range) |> Enum.chunk_every(tiles_per_row)
   end
 
-  @spec print_standard_colors(Range.t(), pos_integer, pos_integer) :: :ok
-  def print_standard_colors(%Range{} = range, tiles_per_row, column_width) do
-    for row <- standard_color_rows(range, tiles_per_row) do
-      Enum.each(row, &print_tile(&1, column_width, _with_code? = false))
+  @spec print_colors(color_names, print_specs) :: [:ok]
+  def print_colors(names, {range, tiles_per_row, column_width, with_code?}) do
+    for row <- color_rows(names, range, tiles_per_row) do
+      Enum.each(row, &print_tile(&1, column_width, with_code?))
       IO.puts("")
     end
-
-    :ok
-  end
-
-  @spec xterm_color_rows(Range.t(), pos_integer) :: [[{atom, non_neg_integer}]]
-  def xterm_color_rows(%Range{} = range, tiles_per_row) do
-    Enum.map(range, &{@fave_names[&1], &1}) |> Enum.chunk_every(tiles_per_row)
-  end
-
-  @spec print_xterm_colors(Range.t(), pos_integer, pos_integer) :: :ok
-  def print_xterm_colors(%Range{} = range, tiles_per_row, column_width) do
-    for row <- xterm_color_rows(range, tiles_per_row) do
-      Enum.each(row, &print_tile(&1, column_width, _with_code? = true))
-      IO.puts("")
-    end
-
-    :ok
   end
 
   @spec print_color_chart(pos_integer) :: :ok
   def print_color_chart(column_width \\ 18) do
     IO.puts("")
-    print_standard_colors(0..3, 4, column_width)
-    print_standard_colors(8..11, 4, column_width)
+    print_colors(@standard_color_names, {0..3, 4, column_width, false})
+    print_colors(@standard_color_names, {0..3, 4, column_width, false})
+    print_colors(@standard_color_names, {8..11, 4, column_width, false})
     IO.puts("")
-    print_standard_colors(4..7, 4, column_width)
-    print_standard_colors(12..15, 4, column_width)
+    print_colors(@standard_color_names, {4..7, 4, column_width, false})
+    print_colors(@standard_color_names, {12..15, 4, column_width, false})
     IO.puts("")
-    print_xterm_colors(0..3, 4, column_width)
-    print_xterm_colors(8..11, 4, column_width)
+    print_colors(@fave_names, {0..3, 4, column_width, true})
+    print_colors(@fave_names, {8..11, 4, column_width, true})
     IO.puts("")
-    print_xterm_colors(4..7, 4, column_width)
-    print_xterm_colors(12..15, 4, column_width)
+    print_colors(@fave_names, {4..7, 4, column_width, true})
+    print_colors(@fave_names, {12..15, 4, column_width, true})
     IO.puts("")
-    print_xterm_colors(16..255, 6, column_width)
+    print_colors(@fave_names, {16..255, 6, column_width, true})
     IO.puts("")
   end
 
-  @spec print_tile({atom, non_neg_integer}, pos_integer, boolean) :: :ok
+  @spec print_tile(color_name, pos_integer, boolean) :: :ok
   def print_tile({name, code}, column_width, with_code?) do
     [
       background(name),
