@@ -4,7 +4,7 @@ defmodule IO.ANSI.Plus.MixProject do
   def project do
     [
       app: :io_ansi_plus,
-      version: "0.1.71",
+      version: "0.1.72",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       name: "IO ANSI Plus",
@@ -22,7 +22,7 @@ defmodule IO.ANSI.Plus.MixProject do
   defp description do
     """
     Functionality to render ANSI escape sequences.
-    Clone of module IO.ANSI but supporting named Xterm colors.
+    Clone of module IO.ANSI but supporting named xterm colors.
     """
   end
 

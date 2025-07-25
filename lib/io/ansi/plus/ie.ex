@@ -23,10 +23,11 @@ defmodule IO.ANSI.Plus.IE do
 
   @typedoc "A tuple of color name and color code/index"
   @type color_name :: {atom, non_neg_integer}
+
   @typedoc "A list of color names"
   @type color_names :: [color_name]
 
-  @typedoc "A tuple specifying which color names/codes to print and how"
+  @typedoc "A tuple specifying which colors to print and their layout"
   @type print_specs ::
           {code_range :: Range.t(), tiles_per_row :: pos_integer,
            column_width :: pos_integer, with_code? :: boolean}
@@ -121,11 +122,7 @@ defmodule IO.ANSI.Plus.IE do
 
   @spec duplicate_names :: [{atom, [non_neg_integer]}]
   def duplicate_names do
-    for %{code: code, legacy_names: legacy_names, names: names} <- @colors,
-        name <- legacy_names ++ Enum.filter(names, &is_atom/1) do
-      {name, code}
-    end
-    |> Enum.reduce(%{}, fn {name, code}, acc ->
+    Enum.reduce(@color_names, %{}, fn {name, code}, acc ->
       Map.update(acc, name, [code], &[code | &1])
     end)
     |> Enum.filter(fn {_name, codes} -> length(codes) > 1 end)
@@ -142,6 +139,16 @@ defmodule IO.ANSI.Plus.IE do
       Enum.each(row, &print_tile(&1, column_width, with_code?))
       IO.puts("")
     end
+  end
+
+  @spec print_tile(color_name, pos_integer, boolean) :: :ok
+  def print_tile({name, code}, column_width, with_code?) do
+    [
+      background(name),
+      foreground(code),
+      text(name, code, column_width, with_code?)
+    ]
+    |> ANSI.write()
   end
 
   @spec print_color_chart(pos_integer) :: :ok
@@ -162,16 +169,6 @@ defmodule IO.ANSI.Plus.IE do
     IO.puts("")
     print_colors(@fave_names, {16..255, 6, column_width, true})
     IO.puts("")
-  end
-
-  @spec print_tile(color_name, pos_integer, boolean) :: :ok
-  def print_tile({name, code}, column_width, with_code?) do
-    [
-      background(name),
-      foreground(code),
-      text(name, code, column_width, with_code?)
-    ]
-    |> ANSI.write()
   end
 
   @spec background(atom) :: atom

@@ -32,7 +32,7 @@ defmodule IO.ANSI.Plus do
   In case ANSI is disabled, the ANSI escape sequences are simply discarded.
 
   In addition to the 16 regular ANSI colors and their background counterparts,
-  this module also supports the 256 Xterm colors (foreground and background).
+  this module also supports the 256 xterm colors (foreground and background).
 
   New shortcut functions `IO.ANSI.Plus.gets/2`, `IO.ANSI.Plus.puts/2` and
   `IO.ANSI.Plus.write/2` are also provided.

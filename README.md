@@ -1,7 +1,7 @@
 # IO ANSI Plus
 
 Functionality to render ANSI escape sequences.
-Clone of module [IO.ANSI][IO.ANSI] but supporting named Xterm colors.
+Clone of module [IO.ANSI][IO.ANSI] but supporting named xterm colors.
 
 ## Installation
 
@@ -18,7 +18,7 @@ end
 ## Notes
 
 In addition to the 16 standard ANSI colors[^1] and their background
-counterparts, this package also supports the 256 Xterm colors (foreground and
+counterparts, this package also supports the 256 xterm colors (foreground and
 background).
 
 <ins>All</ins> of these 256 colors were given names like:
@@ -28,7 +28,7 @@ background).
 
 For the full list of color names (there are 1,378 of them), see the section
 [Color Samples](#color-samples) below. Most of these color names are based on
-the post [Naming the 256 XTerm colors][Xterm].
+the post [Naming the 256 XTerm colors][xterm].
 
 You can also use color number atoms instead of specific names:
 
@@ -76,4 +76,4 @@ You can click on any of the 3 images below for a clearer view.
 ## ![color_samples](/images/color_samples.png)
 
 [IO.ANSI]: https://hexdocs.pm/elixir/IO.ANSI.html
-[Xterm]: https://www.wowsignal.io/articles/xterm256
+[xterm]: https://www.wowsignal.io/articles/xterm256
