@@ -27,8 +27,8 @@ background).
 - ![!](/images/d700ff.png) `:psychedelic_purple`
 
 For the full list of color names (there are 1,378 of them), see the section
-[Color Samples](#color-samples) below. Most of these names are based on the post
-[Naming the 256 XTerm colors][Xterm].
+[Color Samples](#color-samples) below. Most of these color names are based on
+the post [Naming the 256 XTerm colors][Xterm].
 
 You can also use color number atoms instead of specific names:
 
