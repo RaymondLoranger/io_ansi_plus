@@ -4,14 +4,15 @@ defmodule IO.ANSI.Plus.MixProject do
   def project do
     [
       app: :io_ansi_plus,
-      version: "0.1.73",
+      version: "0.1.74",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       name: "IO ANSI Plus",
       source_url: source_url(),
       description: description(),
       package: package(),
-      deps: deps()
+      deps: deps(),
+      docs: docs()
     ]
   end
 
@@ -28,7 +29,7 @@ defmodule IO.ANSI.Plus.MixProject do
 
   defp package do
     [
-      files: ["lib", "mix.exs", "README*", "config/persist*.exs"],
+      files: ["lib/io/ansi/*.exs", "mix.exs", "README*", "config/persist*.exs"],
       maintainers: ["Raymond Loranger"],
       licenses: ["MIT"],
       links: %{"GitHub" => source_url()}
@@ -48,6 +49,15 @@ defmodule IO.ANSI.Plus.MixProject do
       {:dialyxir, "~> 1.0", only: :dev, runtime: false},
       {:ex_doc, "~> 0.22", only: :dev, runtime: false},
       {:persist_config, "~> 0.4", runtime: false}
+    ]
+  end
+
+  defp docs do
+    [
+      # Ensures README.md is the landing page
+      main: "readme",
+      extras: ["README.md"],
+      markdown_processor_options: [footnotes: true]
     ]
   end
 end

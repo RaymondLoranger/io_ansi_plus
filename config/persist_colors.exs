@@ -2318,7 +2318,16 @@ colors = [
     names: [
       :aqua_green,
       [:benzol_green],
-      :cōng_lǜ_green,
+      # String.to_charlist("ǜ") #=> [476] where ǜ is invalid in an atom
+      # :unicode.characters_to_nfd_list([476]) #=> [117, 776, 768]
+      # :unicode.characters_to_nfkc_list([117, 776, 768]) #=> [476]
+      # List.to_string([117, 776, 768]) #=> "ǜ" where ǜ is valid in an atom
+      # byte_size("ǜ") #=> 2 where ǜ is invalid in an atom
+      # byte_size("ǜ") #=> 5 where ǜ is valid in an atom
+      # Below we use ǜ (valid in an atom).
+      # But we exclude this file from the formatter.
+      # Otherwise the formatter would normalize the atom to :"cōng_lǜ_green".
+      :cōng_lǜ_green,
       :underwater_fern,
       :caribbean_green
     ]

@@ -204,4 +204,121 @@ defmodule IO.ANSI.Plus.IE do
     end
     |> adjust_text(column_width)
   end
+
+  @spec examples :: :ok
+  def examples do
+    puts(["Hello ", :light_red, "world!"], "Works as expected...")
+
+    puts(
+      [
+        ["Hello ", :baby_blue, "world!"],
+        ["Hello ", :frozen_turquoise, "world!"]
+      ],
+      "Two identical foreground colors for code 87..."
+    )
+
+    puts(
+      [
+        [:light_white, "Hello ", :dark_blue_background, "world!"],
+        [:light_white, "Hello ", :black_background, "world!"],
+        [:light_white, "Hello ", :cobalt_background, "world!"],
+        [:light_white, "Hello ", :red_blood_background, "world!"],
+        [:light_white, "Hello ", :orange_red_background, "world!"],
+        [:light_white, "Hello ", :gold_background, "world!"],
+        [:light_white, "Hello ", :light_yellow_background, "world!"]
+      ],
+      "Sometimes the background color alters the foreground color..."
+    )
+
+    puts(
+      [
+        [:red_door_background, :light_white, "ERROR: invalid coordinates"],
+        [
+          :free_speech_red_background,
+          :light_white,
+          "Game ",
+          :yellow,
+          "Skyfall",
+          :light_white,
+          " already started."
+        ]
+      ],
+      "Two identical background colors for code 124..."
+    )
+
+    puts(
+      [
+        [
+          :aqua_green_background,
+          :encarnado,
+          "Game ",
+          :yellow,
+          "Skyfall",
+          # :light_white,
+          :blue,
+          " already started."
+        ],
+        [
+          :light_yellow_background,
+          :encarnado,
+          "Game ",
+          :yellow,
+          "Skyfall",
+          # :light_white,
+          :blue,
+          " already started."
+        ],
+        [
+          :pale_grey_background,
+          :encarnado,
+          "Game ",
+          :yellow,
+          "Skyfall",
+          # :light_white,
+          :blue,
+          " already started."
+        ],
+        [
+          :vantablack_background,
+          :encarnado,
+          "Game ",
+          :yellow,
+          "Skyfall",
+          # :light_white,
+          :blue,
+          " already started."
+        ],
+        [
+          :encarnado,
+          "Game ",
+          :yellow,
+          "Skyfall",
+          # :light_white,
+          :blue,
+          " already started."
+        ]
+      ],
+      "Sometimes the background color alters the foreground colors..."
+    )
+  end
+
+  defp puts([[_ | _] | _] = ansidata, message) do
+    times = String.length(message)
+    ruler = String.duplicate("-", times)
+    IO.puts("")
+    IO.puts(ruler)
+    IO.puts(message)
+    IO.puts(ruler)
+
+    for data <- ansidata do
+      IO.inspect(data)
+      ANSI.puts(data)
+    end
+
+    :ok
+  end
+
+  defp puts(data, message) do
+    puts([[data]], message)
+  end
 end

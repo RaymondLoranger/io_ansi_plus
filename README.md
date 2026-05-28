@@ -22,9 +22,9 @@ counterparts, this package also supports the 256 xterm colors (foreground and
 background).
 
 <ins>All</ins> of these 256 colors were given names like:
-- ![!](/images/00ffff.png) `:aqua`
-- ![!](/images/87ff00.png) `:chartreuse`
-- ![!](/images/d700ff.png) `:psychedelic_purple`
+- ![!](images/00ffff.png) `:aqua`
+- ![!](images/87ff00.png) `:chartreuse`
+- ![!](images/d700ff.png) `:psychedelic_purple`
 
 For the full list of color names (there are 1,378 of them), see the section
 [Color Samples](#color-samples) below. Most of these color names are based on
@@ -67,13 +67,13 @@ alias IO.ANSI.Plus, as: ANSI
 You can click on any of the 3 images below for a clearer view.
 
 ## Examples
-## ![examples](/images/examples.png)
+## ![examples](images/examples.png)
 
 ## Color Chart
-## ![color_chart](/images/color_chart.png)
+## ![color_chart](images/color_chart.png)
 
 ## Color Samples
-## ![color_samples](/images/color_samples.png)
+## ![color_samples](images/color_samples.png)
 
 [IO.ANSI]: https://hexdocs.pm/elixir/IO.ANSI.html
 [xterm]: https://www.wowsignal.io/articles/xterm256
