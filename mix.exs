@@ -4,7 +4,7 @@ defmodule IO.ANSI.Plus.MixProject do
   def project do
     [
       app: :io_ansi_plus,
-      version: "0.1.78",
+      version: "0.1.79",
       elixir: "~> 1.11",
       start_permanent: Mix.env() == :prod,
       name: "IO ANSI Plus",
@@ -28,8 +28,7 @@ defmodule IO.ANSI.Plus.MixProject do
 
   defp package do
     [
-      files:
-        ~w[lib/io/ansi/*.ex mix.exs README* config/persist*.exs images/*.png],
+      files: ~w[lib/io/ansi/*.ex mix.exs README* config/persist*.exs images],
       maintainers: ["Raymond Loranger"],
       licenses: ["MIT"],
       links: %{"GitHub" => source_url()}
