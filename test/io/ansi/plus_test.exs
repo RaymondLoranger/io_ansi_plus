@@ -24,6 +24,17 @@ defmodule IO.ANSI.PlusTest do
                [[[[[], "Hello, "] | "\e[91m"], "world!"] | "\e[0m"]
     end
 
+    test "works for nested lists" do
+      assert Plus.format([[:cyan, ["Hello, "]], [:light_white, ["World!"]]]) ==
+               [[[[[[] | "\e[36m"], "Hello, "] | "\e[97m"], "World!"] | "\e[0m"]
+
+      assert Plus.format([[:cyan, ["Hello, "]], [:light_white, ["World!"]]]) ==
+               Plus.format([[:cyan, "Hello, "], [:light_white, "World!"]])
+
+      assert Plus.format([[:cyan, ["Hello, "]], [:light_white, ["World!"]]]) ==
+               Plus.format([:cyan, "Hello, ", :light_white, "World!"])
+    end
+
     # -------------
     # Xterm colors...
     # -------------
@@ -40,11 +51,6 @@ defmodule IO.ANSI.PlusTest do
     test "the color composite artefact green" do
       assert Plus.format(["Hi, ", :composite_artefact_green, "world!"], true) ==
                [[[[[], "Hi, "] | "\e[38;5;76m"], "world!"] | "\e[0m"]
-    end
-
-    test "works for nested lists" do
-      assert Plus.format([[:cyan, ["Hello, "]], [:light_white, ["World!"]]]) ==
-               [[[[[[] | "\e[36m"], "Hello, "] | "\e[97m"], "World!"] | "\e[0m"]
     end
   end
 end
