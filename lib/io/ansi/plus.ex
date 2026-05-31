@@ -20,19 +20,20 @@ defmodule IO.ANSI.Plus do
   Because the ANSI escape sequences are embedded in text, the normal usage of
   these functions is to concatenate their output with text.
 
-      formatted_text = IO.ANSI.blue_background() <> "Example" <> IO.ANSI.reset()
+      formatted_text =
+        IO.ANSI.Plus.cyan_background() <> "Example" <> IO.ANSI.Plus.reset()
       IO.puts(formatted_text)
 
-  A higher level and more convenient API is provided via `IO.ANSI.format/1`
+  A higher level and more convenient API is provided via `IO.ANSI.Plus.format/1`
   which accepts atoms to represent ANSI escape sequences and which, by default,
   checks if ANSI is enabled:
 
-      IO.puts(IO.ANSI.format([:blue_background, "Example"]))
+      IO.puts(IO.ANSI.Plus.format([:cyan_background, "Example"]))
 
   In case ANSI is disabled, the ANSI escape sequences are simply discarded.
 
   In addition to the 16 regular ANSI colors and their background counterparts,
-  this module also supports the 256 xterm colors (foreground and background).
+  this module also names the 256 xterm colors (foreground and background).
 
   New shortcut functions `IO.ANSI.Plus.gets/2`, `IO.ANSI.Plus.puts/2` and
   `IO.ANSI.Plus.write/2` are also provided.
@@ -217,7 +218,39 @@ defmodule IO.ANSI.Plus do
     defsequence.(:"light_#{color}_background", code + 100, "m")
   end
 
+  @doc "Default text color."
+  defsequence.(:default_color, 39, "m")
+
+  @doc "Default background color."
+  defsequence.(:default_background, 49, "m")
+
+  @doc "Framed."
+  defsequence.(:framed, 51, "m")
+
+  @doc "Encircled."
+  defsequence.(:encircled, 52, "m")
+
+  @doc "Overlined."
+  defsequence.(:overlined, 53, "m")
+
+  @doc "Not framed or encircled."
+  defsequence.(:not_framed_encircled, 54, "m")
+
+  @doc "Not overlined."
+  defsequence.(:not_overlined, 55, "m")
+
+  @doc "Clears screen."
+  defsequence.(:clear, "2", "J")
+
+  @doc "Clears line."
+  defsequence.(:clear_line, "2", "K")
+
+  @doc "Sends cursor home."
+  defsequence.(:home, "", "H")
+
+  ## -------------------------
   ## Beginning of enhancements
+  ## -------------------------
 
   for code <- 0..255 do
     # def color0(), do: "\e[38;5;0m"
@@ -254,37 +287,9 @@ defmodule IO.ANSI.Plus do
   defguardp is_non_neg_integer(value) when is_integer(value) and value >= 0
   defguardp is_pos_integer(value) when is_integer(value) and value > 0
 
+  ## -------------------
   ## End of enhancements
-
-  @doc "Default text color."
-  defsequence.(:default_color, 39, "m")
-
-  @doc "Default background color."
-  defsequence.(:default_background, 49, "m")
-
-  @doc "Framed."
-  defsequence.(:framed, 51, "m")
-
-  @doc "Encircled."
-  defsequence.(:encircled, 52, "m")
-
-  @doc "Overlined."
-  defsequence.(:overlined, 53, "m")
-
-  @doc "Not framed or encircled."
-  defsequence.(:not_framed_encircled, 54, "m")
-
-  @doc "Not overlined."
-  defsequence.(:not_overlined, 55, "m")
-
-  @doc "Clears screen."
-  defsequence.(:clear, "2", "J")
-
-  @doc "Clears line."
-  defsequence.(:clear_line, "2", "K")
-
-  @doc "Sends cursor home."
-  defsequence.(:home, "", "H")
+  ## -------------------
 
   @doc """
   Sends cursor to the absolute position specified by `line` and `column`.
@@ -325,8 +330,8 @@ defmodule IO.ANSI.Plus do
 
   The named sequences are represented by atoms.
 
-  It will also append an `IO.ANSI.reset/0` to the chardata when a conversion is
-  performed. If you don't want this behavior, use `format_fragment/2`.
+  It will also append an `IO.ANSI.Plus.reset/0` to the chardata when a
+  conversion is performed. To prevent this behavior, use `format_fragment/2`.
 
   An optional boolean parameter can be passed to enable or disable
   emitting actual ANSI codes. When `false`, no ANSI codes will be emitted.
@@ -376,7 +381,7 @@ defmodule IO.ANSI.Plus do
   end
 
   defp do_format(term, rem, acc, false, append_reset) when is_atom(term) do
-    # format_sequence(term)
+    # format_sequence(term) => dead code in IO.ANSI
     do_format([], rem, acc, false, append_reset)
   end
 
@@ -389,7 +394,8 @@ defmodule IO.ANSI.Plus do
   end
 
   defp do_format([], [], acc, true, true) do
-    [acc | IO.ANSI.reset()]
+    # [acc | IO.ANSI.reset()] => useless qualified call in IO.ANSI
+    [acc | reset()]
   end
 
   defp do_format([], [], acc, _emit?, _append_reset) do

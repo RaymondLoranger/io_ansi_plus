@@ -41,5 +41,10 @@ defmodule IO.ANSI.PlusTest do
       assert Plus.format(["Hi, ", :composite_artefact_green, "world!"], true) ==
                [[[[[], "Hi, "] | "\e[38;5;76m"], "world!"] | "\e[0m"]
     end
+
+    test "works for nested lists" do
+      assert Plus.format([[:cyan, ["Hello, "]], [:light_white, ["World!"]]]) ==
+               [[[[[[] | "\e[36m"], "Hello, "] | "\e[97m"], "World!"] | "\e[0m"]
+    end
   end
 end

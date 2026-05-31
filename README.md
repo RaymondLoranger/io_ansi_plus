@@ -18,10 +18,10 @@ end
 ## Notes
 
 In addition to the 16 standard ANSI colors[^1] and their background
-counterparts, this package also supports the 256 xterm colors (foreground and
+counterparts, this package also names the 256 xterm colors (foreground and
 background).
 
-<ins>All</ins> of these 256 colors were given names like:
+Indeed, <ins>all</ins> of these 256 colors were given names like:
 - ![!](/images/00ffff.png) `:aqua`
 - ![!](/images/87ff00.png) `:chartreuse`
 - ![!](/images/d700ff.png) `:psychedelic_purple`
