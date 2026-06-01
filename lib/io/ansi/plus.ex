@@ -84,7 +84,6 @@ defmodule IO.ANSI.Plus do
         number: :yellow,
         string: :green
       ]
-
   """
   @doc since: "1.14.0"
   @spec syntax_colors :: Keyword.t(ansidata)
@@ -347,6 +346,8 @@ defmodule IO.ANSI.Plus do
       iex> IO.ANSI.Plus.format(["Hello, ", :red, :brite, "world!"], true)
       ** (ArgumentError) invalid ANSI sequence specification: :brite
 
+      iex> IO.ANSI.Plus.format(["Hello, ", :red, :brite, "world!"], false)
+      ** (ArgumentError) invalid ANSI sequence specification: :brite
   """
   @spec format(ansidata, boolean) :: IO.chardata()
   def format(ansidata, emit? \\ enabled?()) when is_boolean(emit?) do
@@ -367,7 +368,6 @@ defmodule IO.ANSI.Plus do
 
       iex> IO.ANSI.Plus.format_fragment([:bright, ~c"Word"], true)
       [[[[[[] | "\e[1m"], 87], 111], 114], 100]
-
   """
   @spec format_fragment(ansidata, boolean) :: IO.chardata()
   def format_fragment(ansidata, emit? \\ enabled?()) when is_boolean(emit?) do
@@ -384,7 +384,7 @@ defmodule IO.ANSI.Plus do
   end
 
   defp do_format(term, rem, acc, false, append_reset) when is_atom(term) do
-    # Will raise if atom is invalid...
+    # Will raise if atom is invalid and ANSI coloring is disabled...
     format_sequence(term)
     do_format([], rem, acc, false, append_reset)
   end
