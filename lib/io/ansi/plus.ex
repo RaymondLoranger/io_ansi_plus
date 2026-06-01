@@ -344,6 +344,9 @@ defmodule IO.ANSI.Plus do
       iex> IO.ANSI.Plus.format(["Hello, ", :red, :bright, "world!"], true)
       [[[[[[], "Hello, "] | "\e[31m"] | "\e[1m"], "world!"] | "\e[0m"]
 
+      iex> IO.ANSI.Plus.format(["Hello, ", :red, :brite, "world!"], true)
+      ** (ArgumentError) invalid ANSI sequence specification: :brite
+
   """
   @spec format(ansidata, boolean) :: IO.chardata()
   def format(ansidata, emit? \\ enabled?()) when is_boolean(emit?) do
@@ -381,7 +384,8 @@ defmodule IO.ANSI.Plus do
   end
 
   defp do_format(term, rem, acc, false, append_reset) when is_atom(term) do
-    # format_sequence(term) => dead code in IO.ANSI
+    # Will raise if atom is invalid...
+    format_sequence(term)
     do_format([], rem, acc, false, append_reset)
   end
 
