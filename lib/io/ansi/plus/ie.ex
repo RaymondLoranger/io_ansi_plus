@@ -302,6 +302,7 @@ defmodule IO.ANSI.Plus.IE do
     )
   end
 
+  @spec puts([ANSI.ansidata()], String.t()) :: :ok
   defp puts([[_ | _] | _] = ansidata, message) do
     times = String.length(message)
     ruler = String.duplicate("-", times)
@@ -310,15 +311,15 @@ defmodule IO.ANSI.Plus.IE do
     IO.puts(message)
     IO.puts(ruler)
 
-    for data <- ansidata do
-      IO.inspect(data)
-      ANSI.puts(data)
+    for data <- ansidata, reduce: :ok do
+      :ok ->
+        IO.inspect(data)
+        ANSI.puts(data)
     end
-
-    :ok
   end
 
+  @spec puts(ANSI.ansidata(), String.t()) :: :ok
   defp puts(data, message) do
-    puts([[data]], message)
+    puts([data], message)
   end
 end
