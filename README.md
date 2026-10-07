@@ -64,7 +64,7 @@ alias IO.ANSI.Plus, as: ANSI
 [:aqua, "Your move:", :reset, " "] |> ANSI.gets(true)
 ```
 ## Note
-You can click on any of the 3 images below for a clearer view.
+You can click on any of the 3 images below for a clearer view if on GitHub.
 
 ## Examples
 ## ![examples](/images/examples.png)
